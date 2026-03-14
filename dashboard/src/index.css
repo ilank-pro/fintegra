@@ -10,11 +10,11 @@
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
   
-  --accent-primary: #3b82f6; /* Cyber Blue */
-  --accent-success: #10b981; /* Emerald Mist */
-  --accent-warning: #f59e0b; /* Amber Glow */
-  --accent-danger: #ef4444; /* Rose Glow */
-  --accent-purple: #8b5cf6; /* Violet Neon */
+  --accent-primary: #00f0ff; /* Neon Cyan */
+  --accent-success: #00ff9f; /* Neon Green */
+  --accent-warning: #ffe600; /* Neon Yellow */
+  --accent-danger: #ff0055; /* Neon Pink */
+  --accent-purple: #bc00ff; /* Neon Purple */
   
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);

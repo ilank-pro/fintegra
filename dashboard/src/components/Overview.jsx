@@ -148,7 +148,7 @@ export default function Overview() {
                         <div className="metric-header">
                             <div className="metric-icon flex-center" style={{ 
                                 color: iconColor,
-                                background: 'hsla(var(--bg-base), 0.3)',
+                                background: 'rgba(10, 12, 16, 0.3)',
                                 boxShadow: `0 0 15px ${iconColor}22`
                             }}>{icon}</div>
                             <span style={{ fontWeight: 500, color: 'var(--text-secondary)' }}>{label}</span>
