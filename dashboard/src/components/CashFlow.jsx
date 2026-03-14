@@ -38,8 +38,8 @@ const CATEGORY_TRANSLATIONS = {
 };
 
 const DONUT_COLORS = [
-    '#ef4444', '#f97316', '#f59e0b', '#22c55e',
-    '#3b82f6', '#8b5cf6', '#14b8a6', '#ec4899',
+    '#3b82f6', '#8b5cf6', '#10b981', '#f59e0b',
+    '#ef4444', '#14b8a6', '#f97316', '#ec4899',
 ];
 
 const tooltipDefaults = {
@@ -159,14 +159,14 @@ export default function CashFlow() {
         const datasets = [{
             label: 'Cumulative Cash Flow',
             data: historicalFull,
-            borderColor: '#3b82f6',
+            borderColor: '#00F0FF', // Cyber theme color
             backgroundColor: (ctx) => {
                 const chart = ctx.chart;
                 const { ctx: canvasCtx, chartArea } = chart;
-                if (!chartArea) return 'rgba(59,130,246,0.1)';
+                if (!chartArea) return 'rgba(0, 240, 255, 0.1)'; // Cyber theme color
                 const gradient = canvasCtx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
-                gradient.addColorStop(0, 'rgba(59,130,246,0.25)');
-                gradient.addColorStop(1, 'rgba(59,130,246,0.01)');
+                gradient.addColorStop(0, 'rgba(0, 240, 255, 0.25)'); // Cyber theme color
+                gradient.addColorStop(1, 'rgba(0, 240, 255, 0.01)'); // Cyber theme color
                 return gradient;
             },
             fill: true,
@@ -175,6 +175,10 @@ export default function CashFlow() {
             pointHoverRadius: 7,
             borderWidth: 2,
             spanGaps: false,
+            shadowOffsetX: 0, // Glowing effect
+            shadowOffsetY: 0,
+            shadowBlur: 10,
+            shadowColor: 'rgba(0, 240, 255, 0.7)',
         }];
 
         if (showProjection) {

@@ -136,7 +136,7 @@ export default function Overview() {
         <div className="overview-container">
             <div className="metrics-grid">
                 {cards.map(({ icon, iconColor, label, sub, isNegative, render }, i) => (
-                    <div
+                        <div
                         key={label}
                         className={`metric-card glass-panel${isNegative ? ' metric-card-negative' : ''}`}
                         style={{
@@ -146,13 +146,17 @@ export default function Overview() {
                         }}
                     >
                         <div className="metric-header">
-                            <div className="metric-icon flex-center" style={{ color: iconColor }}>{icon}</div>
-                            <span>{label}</span>
+                            <div className="metric-icon flex-center" style={{ 
+                                color: iconColor,
+                                background: 'hsla(var(--bg-base), 0.3)',
+                                boxShadow: `0 0 15px ${iconColor}22`
+                            }}>{icon}</div>
+                            <span style={{ fontWeight: 500, color: 'var(--text-secondary)' }}>{label}</span>
                         </div>
-                        <div className="metric-value">
+                        <div className="metric-value" style={{ fontWeight: 800, letterSpacing: '-1.5px', marginTop: '4px' }}>
                             {mounted ? render(i * 70) : '₪0'}
                         </div>
-                        <div className="text-muted" style={{ fontSize: '12px' }}>{sub}</div>
+                        <div className="text-muted" style={{ fontSize: '11px', fontWeight: 500, opacity: 0.8 }}>{sub}</div>
                     </div>
                 ))}
             </div>

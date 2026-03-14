@@ -163,14 +163,23 @@ export default function Transactions() {
                             const catEn = CATEGORY_TRANSLATIONS[catHe] || catHe;
                             const isIncome = t.isIncome;
                             return (
-                                <tr key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.04)', transition: 'background 0.15s' }} className="hover-row">
-                                    <td style={{ padding: '14px 8px', fontSize: '13px', color: 'var(--text-secondary)' }}>{formatDate(t.date)}</td>
-                                    <td style={{ padding: '14px 8px', fontSize: '14px', fontWeight: 500 }}>{t.businessName || 'Unknown'}</td>
-                                    <td style={{ padding: '14px 8px' }}>
-                                        <span className="category-chip" title={catHe}>{catEn}</span>
+                                <tr key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.02)', transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)' }} className="hover-row">
+                                    <td style={{ padding: '16px 8px', fontSize: '13px', color: 'var(--text-secondary)', fontWeight: 500 }}>{formatDate(t.date)}</td>
+                                    <td style={{ padding: '16px 8px', fontSize: '14px', fontWeight: 600, color: 'var(--text-primary)' }}>{t.businessName || 'Unknown'}</td>
+                                    <td style={{ padding: '16px 8px' }}>
+                                        <span className="category-chip" style={{ 
+                                            background: 'rgba(255,255,255,0.04)', 
+                                            border: '1px solid rgba(255,255,255,0.06)',
+                                            padding: '4px 12px',
+                                            borderRadius: '8px',
+                                            fontSize: '11px',
+                                            fontWeight: 600,
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '0.05em'
+                                        }} title={catHe}>{catEn}</span>
                                     </td>
-                                    <td style={{ padding: '14px 8px', fontSize: '13px', color: 'var(--text-secondary)' }}>{t.source || '—'}</td>
-                                    <td style={{ padding: '14px 8px', fontSize: '14px', fontWeight: 600, textAlign: 'right', color: isIncome ? 'var(--accent-success)' : 'var(--text-primary)' }}>
+                                    <td style={{ padding: '16px 8px', fontSize: '13px', color: 'var(--text-muted)' }}>{t.source || '—'}</td>
+                                    <td style={{ padding: '16px 8px', fontSize: '15px', fontWeight: 700, textAlign: 'right', color: isIncome ? 'var(--accent-success)' : 'var(--text-primary)' }}>
                                         {isIncome ? '+' : '-'}{formatCurrency(t.amount)}
                                     </td>
                                 </tr>
