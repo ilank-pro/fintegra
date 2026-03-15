@@ -6,11 +6,14 @@ const client = new RiseUpClient();
 const budget = await client.budget.current();
 const txns = budget.envelopes.flatMap(e => e.actuals);
 
+// Use user-overridden category (trackingCategory.name) when available, fall back to system category (expense)
+const resolveCategory = (t) => t.trackingCategory?.name || t.expense;
+
 const transactions = txns.map(t => ({
   date: t.transactionDate || t.billingDate || t.originalDate,
   amount: t.isIncome ? (t.incomeAmount || t.billingAmount || 0) : Math.abs(t.billingAmount || 0),
   businessName: t.businessName || '',
-  category: t.isIncome ? (t.expense || 'income') : (t.expense || ''),
+  category: t.isIncome ? (resolveCategory(t) || 'income') : (resolveCategory(t) || ''),
   source: t.source || '',
   isIncome: !!t.isIncome,
   isTemp: !!t.isTemp,
@@ -18,7 +21,7 @@ const transactions = txns.map(t => ({
 
 const spending = {};
 for (const t of txns.filter(tx => !tx.isIncome)) {
-  const cat = t.expense || 'Other';
+  const cat = resolveCategory(t) || 'Other';
   if (!spending[cat]) spending[cat] = { name: cat, total: 0, count: 0 };
   spending[cat].total += Math.abs(t.billingAmount || 0);
   spending[cat].count += 1;
@@ -28,7 +31,7 @@ const income = txns.filter(tx => tx.isIncome).map(t => ({
   date: t.transactionDate || t.billingDate,
   amount: t.incomeAmount || t.billingAmount || 0,
   businessName: t.businessName || '',
-  category: t.expense || 'income',
+  category: resolveCategory(t) || 'income',
 }));
 
 // ── Trajectory data ──────────────────────────────────────────────
@@ -56,7 +59,7 @@ const catAggregated = {};
 for (const env of budget.envelopes) {
   const expenses = (env.actuals || []).filter(t => !t.isIncome);
   for (const t of expenses) {
-    const catName = t.expense || 'Other';
+    const catName = resolveCategory(t) || 'Other';
     if (!catAggregated[catName]) catAggregated[catName] = { actual: 0, txnCount: 0 };
     catAggregated[catName].actual += Math.abs(t.billingAmount || 0);
     catAggregated[catName].txnCount += 1;

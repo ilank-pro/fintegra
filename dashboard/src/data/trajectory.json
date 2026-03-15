@@ -52,68 +52,57 @@
     {
       "name": "ביטוח",
       "budgeted": 2434.39,
-      "actual": 975.9100000000001,
-      "projected": 2016.880666666667,
+      "actual": 691.1700000000001,
+      "projected": 1428.4180000000001,
       "historyAverage": 0,
       "basedOnHistoryAverage": false,
-      "pctBudgetUsed": 40.1,
+      "pctBudgetUsed": 28.4,
       "onTrack": true,
-      "txnCount": 5
+      "txnCount": 4
+    },
+    {
+      "name": "פארמה",
+      "budgeted": 0,
+      "actual": 805.74,
+      "projected": 1665.1960000000001,
+      "historyAverage": 1308.4333333333334,
+      "basedOnHistoryAverage": true,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 4
     },
     {
       "name": "כללי",
       "budgeted": -1282.72,
-      "actual": 3381,
-      "projected": 6987.400000000001,
+      "actual": 3081,
+      "projected": 6367.400000000001,
       "historyAverage": 0,
       "basedOnHistoryAverage": false,
       "pctBudgetUsed": 0,
       "onTrack": true,
-      "txnCount": 6
+      "txnCount": 3
     },
     {
       "name": "כלכלה",
       "budgeted": 0,
-      "actual": 1854.7900000000002,
-      "projected": 3833.232666666667,
+      "actual": 3499.79,
+      "projected": 7232.899333333334,
       "historyAverage": 7008.556666666667,
       "basedOnHistoryAverage": false,
       "pctBudgetUsed": 0,
       "onTrack": true,
-      "txnCount": 20
-    },
-    {
-      "name": "אוכל בחוץ",
-      "budgeted": 0,
-      "actual": 3059,
-      "projected": 6321.933333333333,
-      "historyAverage": 2886.2999999999997,
-      "basedOnHistoryAverage": true,
-      "pctBudgetUsed": 0,
-      "onTrack": true,
-      "txnCount": 21
-    },
-    {
-      "name": "העברות",
-      "budgeted": -3827.7799999999997,
-      "actual": 2064,
-      "projected": 4265.599999999999,
-      "historyAverage": 0,
-      "basedOnHistoryAverage": false,
-      "pctBudgetUsed": 0,
-      "onTrack": true,
-      "txnCount": 5
+      "txnCount": 25
     },
     {
       "name": "תרומה",
       "budgeted": 0,
-      "actual": 1964.06,
-      "projected": 4059.057333333333,
+      "actual": 404.06,
+      "projected": 835.0573333333334,
       "historyAverage": 646.7800000000001,
       "basedOnHistoryAverage": false,
       "pctBudgetUsed": 0,
       "onTrack": true,
-      "txnCount": 8
+      "txnCount": 9
     },
     {
       "name": "ביגוד והנעלה",
@@ -129,13 +118,24 @@
     {
       "name": "חינוך",
       "budgeted": 0,
-      "actual": 359.2,
-      "projected": 742.3466666666666,
+      "actual": 2225.2,
+      "projected": 4598.746666666667,
       "historyAverage": 3756.8666666666663,
       "basedOnHistoryAverage": false,
       "pctBudgetUsed": 0,
       "onTrack": true,
-      "txnCount": 1
+      "txnCount": 4
+    },
+    {
+      "name": "אוכל בחוץ",
+      "budgeted": 0,
+      "actual": 1414,
+      "projected": 2922.2666666666664,
+      "historyAverage": 2886.2999999999997,
+      "basedOnHistoryAverage": true,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 16
     },
     {
       "name": "רכב",
@@ -149,17 +149,6 @@
       "txnCount": 7
     },
     {
-      "name": "פארמה",
-      "budgeted": 0,
-      "actual": 521,
-      "projected": 1076.7333333333333,
-      "historyAverage": 1308.4333333333334,
-      "basedOnHistoryAverage": true,
-      "pctBudgetUsed": 0,
-      "onTrack": true,
-      "txnCount": 3
-    },
-    {
       "name": "סליקת אשראי",
       "budgeted": 0,
       "actual": 226.54,
@@ -169,6 +158,17 @@
       "pctBudgetUsed": 0,
       "onTrack": true,
       "txnCount": 1
+    },
+    {
+      "name": "העברות",
+      "budgeted": -3827.7799999999997,
+      "actual": 2058,
+      "projected": 4253.2,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 4
     },
     {
       "name": "קניות",

@@ -154,28 +154,74 @@ function refreshDataPlugin() {
           addLog(`  Current budget: ${current.budgetDate}, ${current.transactions.length} txns, updated ${current.lastUpdatedAt}`)
 
           // Merge current transactions into existing transactions.json
+          // Current budget data takes priority (has user category overrides)
           const existingTxnPath = join(dataDir, 'transactions.json')
           let allTxns: any[] = []
           try { allTxns = JSON.parse(fs.readFileSync(existingTxnPath, 'utf-8')) } catch {}
-          const txnSeen = new Set(allTxns.map((t: any) => `${t.date}_${t.amount}_${t.businessName}`))
-          let addedTxns = 0
+          const currentTxnMap = new Map<string, any>()
           for (const t of current.transactions) {
-            const key = `${t.date}_${t.amount}_${t.businessName}`
-            if (!txnSeen.has(key)) { txnSeen.add(key); allTxns.push(t); addedTxns++ }
+            currentTxnMap.set(`${t.date}_${t.amount}_${t.businessName}`, t)
           }
+          let replacedTxns = 0, addedTxns = 0
+          // Replace existing entries with current budget version where keys match
+          allTxns = allTxns.map((t: any) => {
+            const key = `${t.date}_${t.amount}_${t.businessName}`
+            if (currentTxnMap.has(key)) {
+              replacedTxns++
+              const replacement = currentTxnMap.get(key)
+              currentTxnMap.delete(key)
+              return replacement
+            }
+            return t
+          })
+          // Add any remaining current transactions that weren't in existing
+          for (const t of currentTxnMap.values()) {
+            allTxns.push(t)
+            addedTxns++
+          }
+          // Build category override map from current budget (user overrides apply to all months)
+          const categoryOverrides = new Map<string, string>()
+          for (const t of current.transactions) {
+            if (t.category && t.businessName) {
+              categoryOverrides.set(t.businessName, t.category)
+            }
+          }
+          // Apply overrides to ALL transactions (including historical CLI-fetched ones)
+          let overridden = 0
+          allTxns = allTxns.map((t: any) => {
+            const override = categoryOverrides.get(t.businessName)
+            if (override && t.category !== override) {
+              overridden++
+              return { ...t, category: override }
+            }
+            return t
+          })
+
           writeJson('transactions', JSON.stringify(allTxns, null, 2))
           const allTxnMonths = [...new Set(allTxns.map((t: any) => t.date?.slice(0, 7)).filter(Boolean))].sort()
-          addLog(`  Merged ${addedTxns} new transactions (total ${allTxns.length}), months: ${allTxnMonths.join(', ')}`)
+          addLog(`  Merged transactions: ${replacedTxns} replaced, ${addedTxns} new, ${overridden} category overrides (total ${allTxns.length}), months: ${allTxnMonths.join(', ')}`)
 
-          // Merge current income into existing income.json
+          // Merge current income into existing income.json (current budget takes priority)
           const existingIncPath = join(dataDir, 'income.json')
           let allInc: any[] = []
           try { allInc = JSON.parse(fs.readFileSync(existingIncPath, 'utf-8')) } catch {}
-          const incSeen = new Set(allInc.map((t: any) => `${t.date}_${t.amount}_${t.businessName}`))
-          let addedInc = 0
+          const currentIncMap = new Map<string, any>()
           for (const t of current.income) {
+            currentIncMap.set(`${t.date}_${t.amount}_${t.businessName}`, t)
+          }
+          let addedInc = 0
+          allInc = allInc.map((t: any) => {
             const key = `${t.date}_${t.amount}_${t.businessName}`
-            if (!incSeen.has(key)) { incSeen.add(key); allInc.push(t); addedInc++ }
+            if (currentIncMap.has(key)) {
+              const replacement = currentIncMap.get(key)
+              currentIncMap.delete(key)
+              return replacement
+            }
+            return t
+          })
+          for (const t of currentIncMap.values()) {
+            allInc.push(t)
+            addedInc++
           }
           writeJson('income', JSON.stringify(allInc, null, 2))
           addLog(`  Merged ${addedInc} new income entries (total ${allInc.length})`)
