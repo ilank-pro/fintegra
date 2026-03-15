@@ -22,4 +22,10 @@ echo "Starting Financial Dashboard..."
 
 # Navigate to dashboard and run
 cd "$DASHBOARD_DIR"
+
+if [ ! -d "node_modules" ]; then
+    echo "Installing dependencies..."
+    npm install
+fi
+
 npm run dev
