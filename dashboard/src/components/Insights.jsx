@@ -6,8 +6,9 @@ import spendingData from '../data/spending.json';
 import incomeData from '../data/income.json';
 import trendsData from '../data/trends.json';
 import transactionsData from '../data/transactions.json';
+import trajectoryData from '../data/trajectory.json';
 import { getBudgetMonth } from '../utils/budgetMonth';
-import { Lightbulb, AlertTriangle, CheckCircle2, TrendingUp, TrendingDown, Activity, ChevronDown, ChevronUp, Trophy, Gauge, Target } from 'lucide-react';
+import { Lightbulb, AlertTriangle, CheckCircle2, TrendingUp, TrendingDown, Activity, ChevronDown, ChevronUp, Trophy, Gauge, Target, BarChart3, History } from 'lucide-react';
 
 const formatCurrency = (val) => {
     if (val === undefined || val === null) return '₪0';
@@ -182,6 +183,156 @@ function AdvisorCard({ item, index }) {
                     </div>
                 </div>
             )}
+        </div>
+    );
+}
+
+// ─── Budget vs Actual Trajectory ─────────────────────────────────────
+function BudgetVsActual() {
+    const traj = trajectoryData;
+    if (!traj || !traj.categories) return null;
+
+    const withBudget = traj.categories.filter(c => c.budgeted > 0 && (c.actual > 0 || c.budgeted > 100));
+    if (withBudget.length === 0) return null;
+
+    const pctElapsed = traj.pctMonthElapsed || 0;
+
+    return (
+        <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '4px' }}>
+                <BarChart3 size={18} color="var(--accent-primary)" />
+                <h3 style={{ fontWeight: 600 }}>Budget vs Actual</h3>
+                <span style={{ padding: '2px 10px', background: 'rgba(0,240,255,0.1)', color: 'var(--accent-primary)', borderRadius: '12px', fontSize: '11px', fontWeight: 600 }}>
+                    {traj.budgetDate}
+                </span>
+            </div>
+            <p style={{ color: 'var(--text-muted)', fontSize: '12px', marginBottom: '14px' }}>
+                Day {traj.daysElapsed} of {traj.daysInMonth} — {pctElapsed.toFixed(0)}% of month elapsed
+            </p>
+
+            <div className="glass-panel" style={{ padding: '16px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    {withBudget.map(cat => {
+                        const pctUsed = cat.pctBudgetUsed;
+                        const delta = pctUsed - pctElapsed;
+                        const barColor = delta > 20 ? 'var(--accent-danger)' : delta > 0 ? 'var(--accent-warning)' : 'var(--accent-success)';
+                        const catEn = CATEGORY_TRANSLATIONS[cat.name] || cat.name;
+
+                        return (
+                            <div key={cat.name}>
+                                <div className="flex-between" style={{ marginBottom: '4px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                        <span style={{ fontSize: '13px', fontWeight: 600 }}>{catEn}</span>
+                                        <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{cat.name}</span>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                        <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                                            {formatCurrency(cat.actual)} / {formatCurrency(cat.budgeted)}
+                                        </span>
+                                        <span style={{
+                                            fontSize: '11px', fontWeight: 700, color: barColor,
+                                            padding: '1px 6px', borderRadius: '4px',
+                                            background: barColor === 'var(--accent-danger)' ? 'rgba(255,0,85,0.12)' : barColor === 'var(--accent-warning)' ? 'rgba(255,230,0,0.12)' : 'rgba(0,255,159,0.12)',
+                                        }}>
+                                            {pctUsed.toFixed(0)}%
+                                        </span>
+                                    </div>
+                                </div>
+                                {/* Progress bar */}
+                                <div style={{ position: 'relative', height: '8px', borderRadius: '4px', background: 'rgba(255,255,255,0.05)' }}>
+                                    <div style={{
+                                        height: '100%', borderRadius: '4px',
+                                        width: `${Math.min(100, pctUsed)}%`,
+                                        background: barColor, opacity: 0.8,
+                                        transition: 'width 0.6s ease',
+                                    }} />
+                                    {/* Elapsed marker */}
+                                    <div style={{
+                                        position: 'absolute', top: '-2px', bottom: '-2px',
+                                        left: `${pctElapsed}%`, width: '2px',
+                                        background: 'var(--text-muted)', opacity: 0.5, borderRadius: '1px',
+                                    }} />
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+                <div style={{ marginTop: '12px', fontSize: '11px', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <div style={{ width: '10px', height: '2px', background: 'var(--text-muted)', opacity: 0.5 }} />
+                    <span>Vertical line = {pctElapsed.toFixed(0)}% month elapsed</span>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+// ─── History Average Comparison ──────────────────────────────────────
+function HistoryComparison() {
+    const traj = trajectoryData;
+    if (!traj || !traj.categories) return null;
+
+    const withHistory = traj.categories
+        .filter(c => c.historyAverage > 0 && c.actual > 0)
+        .map(c => {
+            const delta = c.projected - c.historyAverage;
+            const pct = (delta / c.historyAverage) * 100;
+            return { ...c, delta, deltaPct: pct, isAbove: delta > 0 };
+        })
+        .sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta));
+
+    if (withHistory.length === 0) return null;
+
+    return (
+        <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '4px' }}>
+                <History size={18} color="var(--accent-warning)" />
+                <h3 style={{ fontWeight: 600 }}>vs Historical Average</h3>
+                <span style={{ padding: '2px 10px', background: 'rgba(255,230,0,0.1)', color: 'var(--accent-warning)', borderRadius: '12px', fontSize: '11px', fontWeight: 600 }}>
+                    Pace
+                </span>
+            </div>
+            <p style={{ color: 'var(--text-muted)', fontSize: '12px', marginBottom: '14px' }}>
+                Projected end-of-month vs your usual spending per category
+            </p>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px' }}>
+                {withHistory.map(cat => {
+                    const catEn = CATEGORY_TRANSLATIONS[cat.name] || cat.name;
+                    const color = cat.isAbove ? 'var(--accent-danger)' : 'var(--accent-success)';
+                    const bgColor = cat.isAbove ? 'rgba(255,0,85,0.06)' : 'rgba(0,255,159,0.06)';
+                    const borderColor = cat.isAbove ? 'rgba(255,0,85,0.15)' : 'rgba(0,255,159,0.15)';
+
+                    return (
+                        <div key={cat.name} className="glass-panel" style={{
+                            padding: '14px', background: bgColor, border: `1px solid ${borderColor}`,
+                        }}>
+                            <div className="flex-between" style={{ marginBottom: '8px' }}>
+                                <span style={{ fontSize: '13px', fontWeight: 600 }}>{catEn}</span>
+                                <span style={{
+                                    fontSize: '11px', fontWeight: 700, color,
+                                    padding: '2px 8px', borderRadius: '6px',
+                                    background: cat.isAbove ? 'rgba(255,0,85,0.15)' : 'rgba(0,255,159,0.15)',
+                                }}>
+                                    {cat.isAbove ? 'Above' : 'Below'} avg
+                                </span>
+                            </div>
+                            <div style={{ display: 'flex', gap: '16px', marginBottom: '6px' }}>
+                                <div>
+                                    <div style={{ fontSize: '10px', color: 'var(--text-muted)' }}>Projected</div>
+                                    <div style={{ fontSize: '15px', fontWeight: 700 }}>{formatCurrency(cat.projected)}</div>
+                                </div>
+                                <div>
+                                    <div style={{ fontSize: '10px', color: 'var(--text-muted)' }}>Avg</div>
+                                    <div style={{ fontSize: '15px', fontWeight: 700, color: 'var(--text-secondary)' }}>{formatCurrency(cat.historyAverage)}</div>
+                                </div>
+                            </div>
+                            <div style={{ fontSize: '12px', fontWeight: 600, color }}>
+                                {cat.delta >= 0 ? '+' : ''}{formatCurrency(cat.delta)} ({cat.deltaPct >= 0 ? '+' : ''}{cat.deltaPct.toFixed(0)}%)
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 }
@@ -848,6 +999,12 @@ export default function Insights({ selectedMonths }) {
                     </div>
                 </div>
             )}
+
+            {/* Budget vs Actual Trajectory */}
+            <BudgetVsActual />
+
+            {/* History Average Comparison */}
+            <HistoryComparison />
 
             {/* 50/30/20 Budget Benchmark */}
             <BudgetBenchmark />

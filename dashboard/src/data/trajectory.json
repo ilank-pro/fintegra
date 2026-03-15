@@ -1,0 +1,584 @@
+{
+  "budgetDate": "2026-03",
+  "cashflowStartDay": 1,
+  "daysElapsed": 15,
+  "daysInMonth": 31,
+  "pctMonthElapsed": 48.4,
+  "categories": [
+    {
+      "name": "פנאי",
+      "budgeted": 186.8,
+      "actual": 714.0999999999999,
+      "projected": 1475.8066666666666,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 382.3,
+      "onTrack": false,
+      "txnCount": 9
+    },
+    {
+      "name": "תשלומים",
+      "budgeted": 11878.509999999998,
+      "actual": 11878.529999999999,
+      "projected": 24548.962,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 100,
+      "onTrack": false,
+      "txnCount": 8
+    },
+    {
+      "name": "דיגיטל",
+      "budgeted": 771.18,
+      "actual": 702.96,
+      "projected": 1452.784,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 91.2,
+      "onTrack": false,
+      "txnCount": 12
+    },
+    {
+      "name": "עמלות",
+      "budgeted": 130.64,
+      "actual": 85.49,
+      "projected": 176.67933333333332,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 65.4,
+      "onTrack": false,
+      "txnCount": 5
+    },
+    {
+      "name": "ביטוח",
+      "budgeted": 2434.39,
+      "actual": 975.9100000000001,
+      "projected": 2016.880666666667,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 40.1,
+      "onTrack": true,
+      "txnCount": 5
+    },
+    {
+      "name": "כללי",
+      "budgeted": -1282.72,
+      "actual": 3381,
+      "projected": 6987.400000000001,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 6
+    },
+    {
+      "name": "כלכלה",
+      "budgeted": 0,
+      "actual": 1854.7900000000002,
+      "projected": 3833.232666666667,
+      "historyAverage": 7008.556666666667,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 20
+    },
+    {
+      "name": "אוכל בחוץ",
+      "budgeted": 0,
+      "actual": 3059,
+      "projected": 6321.933333333333,
+      "historyAverage": 2886.2999999999997,
+      "basedOnHistoryAverage": true,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 21
+    },
+    {
+      "name": "העברות",
+      "budgeted": -3827.7799999999997,
+      "actual": 2064,
+      "projected": 4265.599999999999,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 5
+    },
+    {
+      "name": "תרומה",
+      "budgeted": 0,
+      "actual": 1964.06,
+      "projected": 4059.057333333333,
+      "historyAverage": 646.7800000000001,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 8
+    },
+    {
+      "name": "ביגוד והנעלה",
+      "budgeted": 0,
+      "actual": 318,
+      "projected": 657.1999999999999,
+      "historyAverage": 804,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 3
+    },
+    {
+      "name": "חינוך",
+      "budgeted": 0,
+      "actual": 359.2,
+      "projected": 742.3466666666666,
+      "historyAverage": 3756.8666666666663,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 1
+    },
+    {
+      "name": "רכב",
+      "budgeted": 0,
+      "actual": 3519.93,
+      "projected": 7274.521999999999,
+      "historyAverage": 1840.0633333333333,
+      "basedOnHistoryAverage": true,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 7
+    },
+    {
+      "name": "פארמה",
+      "budgeted": 0,
+      "actual": 521,
+      "projected": 1076.7333333333333,
+      "historyAverage": 1308.4333333333334,
+      "basedOnHistoryAverage": true,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 3
+    },
+    {
+      "name": "סליקת אשראי",
+      "budgeted": 0,
+      "actual": 226.54,
+      "projected": 468.18266666666665,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 1
+    },
+    {
+      "name": "קניות",
+      "budgeted": 0,
+      "actual": 555.9,
+      "projected": 1148.86,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 5
+    },
+    {
+      "name": "ארנונה",
+      "budgeted": 2224,
+      "actual": 0,
+      "projected": 0,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 0
+    },
+    {
+      "name": "דיור",
+      "budgeted": 24000,
+      "actual": 0,
+      "projected": 0,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 0
+    },
+    {
+      "name": "חשמל",
+      "budgeted": 548.47,
+      "actual": 0,
+      "projected": 0,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 0
+    },
+    {
+      "name": "משכורת",
+      "budgeted": -45818.62,
+      "actual": 0,
+      "projected": 0,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 0
+    },
+    {
+      "name": "תקשורת",
+      "budgeted": 560.9300000000001,
+      "actual": 0,
+      "projected": 0,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 0
+    },
+    {
+      "name": "השקעה וחיסכון",
+      "budgeted": 2035.67,
+      "actual": 0,
+      "projected": 0,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 0
+    },
+    {
+      "name": "משכנתא",
+      "budgeted": 7661.55,
+      "actual": 0,
+      "projected": 0,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 0
+    },
+    {
+      "name": "קצבאות",
+      "budgeted": -276,
+      "actual": 0,
+      "projected": 0,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 0
+    },
+    {
+      "name": "אחר",
+      "budgeted": 15.82,
+      "actual": 0,
+      "projected": 0,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 0
+    },
+    {
+      "name": "Other",
+      "budgeted": 15869.999999999998,
+      "actual": 0,
+      "projected": 0,
+      "historyAverage": 0,
+      "basedOnHistoryAverage": false,
+      "pctBudgetUsed": 0,
+      "onTrack": true,
+      "txnCount": 0
+    }
+  ],
+  "cashflow": {
+    "actualIncome": 55907.12,
+    "expectedIncome": 0,
+    "totalIncome": 55907.12,
+    "actualExpenses": 32180.410000000014,
+    "expectedExpenses": 43859.14333333335,
+    "totalExpenses": 76039.55333333336,
+    "projectedNet": -20132.433333333356,
+    "pendingExpenses": [
+      {
+        "name": "Unknown",
+        "amount": 1582.58,
+        "date": null,
+        "category": ""
+      },
+      {
+        "name": "Unknown",
+        "amount": 1582.58,
+        "date": null,
+        "category": ""
+      },
+      {
+        "name": "Unknown",
+        "amount": 678.25,
+        "date": null,
+        "category": ""
+      },
+      {
+        "name": "Unknown",
+        "amount": 1,
+        "date": null,
+        "category": ""
+      },
+      {
+        "name": "Unknown",
+        "amount": 1,
+        "date": null,
+        "category": ""
+      },
+      {
+        "name": "Unknown",
+        "amount": 660.9333333333333,
+        "date": null,
+        "category": ""
+      },
+      {
+        "name": "AMAZON PRIME*KS2VV2Q13 888-802-3080  US",
+        "amount": 19.04,
+        "date": "2026-03-13",
+        "category": "דיגיטל"
+      },
+      {
+        "name": "KIDIWATCH",
+        "amount": 19.9,
+        "date": "2026-03-13",
+        "category": "תקשורת"
+      },
+      {
+        "name": "מועצה מקומית תל מונד - הו\"ק",
+        "amount": 2224,
+        "date": "2026-03-15",
+        "category": "ארנונה"
+      },
+      {
+        "name": "מיטב דש גמל-י",
+        "amount": 1800,
+        "date": "2026-03-15",
+        "category": "השקעה וחיסכון"
+      },
+      {
+        "name": "לאומי למשכנת-י",
+        "amount": 7661.55,
+        "date": "2026-03-15",
+        "category": "משכנתא"
+      },
+      {
+        "name": "Google One",
+        "amount": 8,
+        "date": "2026-03-15",
+        "category": "דיגיטל"
+      },
+      {
+        "name": "HOT",
+        "amount": 176.23,
+        "date": "2026-03-16",
+        "category": "תקשורת"
+      },
+      {
+        "name": "PAYPAL *APPLE.COM/BILL 35314369001   GB",
+        "amount": 3.9,
+        "date": "2026-03-16",
+        "category": "דיגיטל"
+      },
+      {
+        "name": "PAYPAL *KESHETBROAD",
+        "amount": 13.9,
+        "date": "2026-03-17",
+        "category": "דיגיטל"
+      },
+      {
+        "name": "OPENAI *CHATGPT SUBSCR OPENAI.COM    US",
+        "amount": 63.82,
+        "date": "2026-03-17",
+        "category": "דיגיטל"
+      },
+      {
+        "name": "בזק בינלאומי בע\"מ",
+        "amount": 3.99,
+        "date": "2026-03-17",
+        "category": "תקשורת"
+      },
+      {
+        "name": "פלאפון חשבון תקופתי",
+        "amount": 98.58,
+        "date": "2026-03-18",
+        "category": "תקשורת"
+      },
+      {
+        "name": "שיק      31039",
+        "amount": 24000,
+        "date": "2026-03-19",
+        "category": "דיור"
+      },
+      {
+        "name": "בנפיט- הו\"ק",
+        "amount": 350,
+        "date": "2026-03-19",
+        "category": "העברות"
+      },
+      {
+        "name": "PAYPAL *APPLE.COM/BILL 35314369001   GB",
+        "amount": 3.9,
+        "date": "2026-03-19",
+        "category": "דיגיטל"
+      },
+      {
+        "name": "RESUME-NOW.COM         844-351-7484  PR",
+        "amount": 77.03,
+        "date": "2026-03-20",
+        "category": "כללי"
+      },
+      {
+        "name": "PAYPAL *NY TIMES NYTIM 4029357733    US",
+        "amount": 6.46,
+        "date": "2026-03-20",
+        "category": "דיגיטל"
+      },
+      {
+        "name": "בזק הוראות קבע",
+        "amount": 28.95,
+        "date": "2026-03-20",
+        "category": "תקשורת"
+      },
+      {
+        "name": "CLAUDE.AI SUBSCRIPTION ANTHROPIC.COM US",
+        "amount": 64.33,
+        "date": "2026-03-21",
+        "category": "דיגיטל"
+      },
+      {
+        "name": "מגדל חיים/בריאות",
+        "amount": 235.67,
+        "date": "2026-03-21",
+        "category": "השקעה וחיסכון"
+      },
+      {
+        "name": "HOT mobile הו\"ק",
+        "amount": 198.08,
+        "date": "2026-03-21",
+        "category": "תקשורת"
+      },
+      {
+        "name": "אלקטרה פאוור סופרגז",
+        "amount": 548.47,
+        "date": "2026-03-22",
+        "category": "חשמל"
+      },
+      {
+        "name": "ביטוח ישיר ביטוח רכב",
+        "amount": 225.77,
+        "date": "2026-03-23",
+        "category": "ביטוח"
+      },
+      {
+        "name": "פיס מנויים",
+        "amount": 60,
+        "date": "2026-03-24",
+        "category": "כללי"
+      },
+      {
+        "name": "איי אי גי ביטוח דירה",
+        "amount": 93.01,
+        "date": "2026-03-24",
+        "category": "ביטוח"
+      },
+      {
+        "name": "איי אי ג'י-ביטוח רכב",
+        "amount": 418.1,
+        "date": "2026-03-24",
+        "category": "ביטוח"
+      },
+      {
+        "name": "שירותי גלישה בטוחה",
+        "amount": 35.2,
+        "date": "2026-03-24",
+        "category": "תקשורת"
+      },
+      {
+        "name": "עיתון מקור ראשון שותפות מ",
+        "amount": 109.9,
+        "date": "2026-03-25",
+        "category": "כללי"
+      },
+      {
+        "name": "הפניקס חיים ובריאות",
+        "amount": 122.55,
+        "date": "2026-03-25",
+        "category": "ביטוח"
+      },
+      {
+        "name": "AIG תאונות ובריאות",
+        "amount": 186.24,
+        "date": "2026-03-25",
+        "category": "ביטוח"
+      },
+      {
+        "name": "הפניקס חיים ובריאות",
+        "amount": 73.15,
+        "date": "2026-03-25",
+        "category": "ביטוח"
+      },
+      {
+        "name": "AIG ביטוח חיים / בריאות",
+        "amount": 30.04,
+        "date": "2026-03-25",
+        "category": "ביטוח"
+      },
+      {
+        "name": "AIG ביטוח חיים / בריאות",
+        "amount": 93.36,
+        "date": "2026-03-25",
+        "category": "ביטוח"
+      },
+      {
+        "name": "הראל-ביטוח דירה",
+        "amount": 154,
+        "date": "2026-03-26",
+        "category": "ביטוח"
+      },
+      {
+        "name": "הראל-ביטוח בריאות",
+        "amount": 66.18,
+        "date": "2026-03-26",
+        "category": "ביטוח"
+      },
+      {
+        "name": "PAYPAL *APPLE.COM/BILL 35314369001   GB",
+        "amount": 3.9,
+        "date": "2026-03-27",
+        "category": "דיגיטל"
+      },
+      {
+        "name": "ENTREPRENEUR MEDIA INC ENTREPRENEUR. US",
+        "amount": 15.82,
+        "date": "2026-03-28",
+        "category": "אחר"
+      },
+      {
+        "name": "דמי כרטיס",
+        "amount": 20,
+        "date": "2026-03-28",
+        "category": "עמלות"
+      },
+      {
+        "name": "דמי כרטיס",
+        "amount": 19.89,
+        "date": "2026-03-28",
+        "category": "עמלות"
+      },
+      {
+        "name": "דמי כרטיס",
+        "amount": 19.89,
+        "date": "2026-03-28",
+        "category": "עמלות"
+      }
+    ],
+    "pendingIncome": []
+  },
+  "variableIncomePrediction": null
+}

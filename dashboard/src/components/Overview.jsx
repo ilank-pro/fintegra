@@ -1,11 +1,25 @@
 import { useEffect, useState, useRef, useMemo } from 'react';
-import { CreditCard, TrendingUp, TrendingDown, DollarSign, PiggyBank, Percent } from 'lucide-react';
+import { CreditCard, TrendingUp, TrendingDown, DollarSign, PiggyBank, Percent, BarChart3 } from 'lucide-react';
 import balanceData from '../data/balance.json';
 import progressData from '../data/progress.json';
+import trajectoryData from '../data/trajectory.json';
 
 const formatCurrency = (val) => {
     if (val === undefined || val === null) return '₪0';
     return new Intl.NumberFormat('he-IL', { style: 'currency', currency: 'ILS' }).format(val).replace('ILS', '₪');
+};
+
+const CATEGORY_TRANSLATIONS = {
+    'מזומן': 'Cash', 'העברות': 'Transfers', 'תשלומים': 'Payments',
+    'כלכלה': 'Groceries', 'משכנתא': 'Mortgage', 'אוכל בחוץ': 'Dining Out',
+    'ביטוח': 'Insurance', 'תרומה': 'Donations', 'השקעה וחיסכון': 'Investments',
+    'קניות': 'Shopping', 'כללי': 'General', 'רכב': 'Car',
+    'דיגיטל': 'Digital', 'חשמל': 'Electricity', 'תקשורת': 'Telecom',
+    'פארמה': 'Pharmacy', 'תחבורה ציבורית': 'Public Transport', 'שיק': 'Check',
+    'חינוך': 'Education', 'תיירות': 'Travel', 'בריאות': 'Health',
+    'ביגוד והנעלה': 'Clothing', 'פנאי': 'Leisure', 'עמלות': 'Fees',
+    'ארנונה': 'Property Tax', 'דיור': 'Housing', 'סליקת אשראי': 'Credit Clearing',
+    'משכורת': 'Salary', 'קצבאות': 'Benefits',
 };
 
 const PROGRESS_STATUS_LABELS = {
@@ -55,6 +69,7 @@ function AnimatedPercent({ target, delay, className }) {
 
 export default function Overview({ selectedMonths, availableMonths }) {
     const [mounted, setMounted] = useState(false);
+    const [pendingOpen, setPendingOpen] = useState(false);
 
     useEffect(() => {
         requestAnimationFrame(() => setMounted(true));
@@ -173,6 +188,129 @@ export default function Overview({ selectedMonths, availableMonths }) {
                     </div>
                 ))}
             </div>
+
+            {/* Current Month Cash Flow Trajectory */}
+            {trajectoryData?.cashflow && (() => {
+                const traj = trajectoryData;
+                const cf = traj.cashflow;
+                const pctElapsed = traj.pctMonthElapsed || 0;
+                const [showPending, setShowPending] = [pendingOpen, setPendingOpen];
+
+                const maxBar = Math.max(cf.totalIncome, cf.totalExpenses) || 1;
+                const incActualPct = (cf.actualIncome / maxBar) * 100;
+                const incExpectedPct = (cf.expectedIncome / maxBar) * 100;
+                const expActualPct = (cf.actualExpenses / maxBar) * 100;
+                const expExpectedPct = (cf.expectedExpenses / maxBar) * 100;
+
+                return (
+                    <div
+                        className="glass-panel"
+                        style={{
+                            marginTop: '24px', padding: '24px',
+                            opacity: mounted ? 1 : 0,
+                            transform: mounted ? 'translateY(0)' : 'translateY(20px)',
+                            transition: 'opacity 0.45s ease 0.45s, transform 0.45s ease 0.45s',
+                        }}
+                    >
+                        <div className="flex-between" style={{ marginBottom: '20px' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                <BarChart3 size={18} color="var(--accent-primary)" />
+                                <h3 style={{ fontWeight: 600 }}>EOM Cash Flow Projection</h3>
+                            </div>
+                            <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                                {traj.budgetDate} · Day {traj.daysElapsed}/{traj.daysInMonth}
+                            </span>
+                        </div>
+
+                        {/* Summary cards */}
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '20px' }}>
+                            <div style={{ padding: '16px', background: 'rgba(0,255,159,0.04)', borderRadius: '10px', border: '1px solid rgba(0,255,159,0.12)' }}>
+                                <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '6px' }}>Projected Income</div>
+                                <div style={{ fontSize: '22px', fontWeight: 800, color: 'var(--accent-success)', marginBottom: '4px' }}>{formatCurrency(cf.totalIncome)}</div>
+                                <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>
+                                    {formatCurrency(cf.actualIncome)} received
+                                    {cf.expectedIncome > 0 && <> + {formatCurrency(cf.expectedIncome)} expected</>}
+                                </div>
+                            </div>
+                            <div style={{ padding: '16px', background: 'rgba(255,0,85,0.04)', borderRadius: '10px', border: '1px solid rgba(255,0,85,0.12)' }}>
+                                <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '6px' }}>Projected Expenses</div>
+                                <div style={{ fontSize: '22px', fontWeight: 800, color: 'var(--accent-danger)', marginBottom: '4px' }}>{formatCurrency(cf.totalExpenses)}</div>
+                                <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>
+                                    {formatCurrency(cf.actualExpenses)} spent + {formatCurrency(cf.expectedExpenses)} expected
+                                </div>
+                            </div>
+                            <div style={{ padding: '16px', background: cf.projectedNet >= 0 ? 'rgba(0,255,159,0.04)' : 'rgba(255,0,85,0.04)', borderRadius: '10px', border: `1px solid ${cf.projectedNet >= 0 ? 'rgba(0,255,159,0.12)' : 'rgba(255,0,85,0.12)'}` }}>
+                                <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '6px' }}>Projected Net</div>
+                                <div style={{ fontSize: '22px', fontWeight: 800, color: cf.projectedNet >= 0 ? 'var(--accent-success)' : 'var(--accent-danger)', marginBottom: '4px' }}>
+                                    {cf.projectedNet >= 0 ? '+' : ''}{formatCurrency(cf.projectedNet)}
+                                </div>
+                                <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>by end of month</div>
+                            </div>
+                        </div>
+
+                        {/* Progress bars */}
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '16px' }}>
+                            <div>
+                                <div className="flex-between" style={{ marginBottom: '4px' }}>
+                                    <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--accent-success)' }}>Income</span>
+                                    <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{formatCurrency(cf.totalIncome)}</span>
+                                </div>
+                                <div style={{ height: '10px', borderRadius: '5px', background: 'rgba(255,255,255,0.05)', display: 'flex', overflow: 'hidden' }}>
+                                    <div style={{ width: `${incActualPct}%`, background: 'var(--accent-success)', opacity: 0.8, transition: 'width 0.6s ease' }} />
+                                    {incExpectedPct > 0 && <div style={{ width: `${incExpectedPct}%`, background: 'var(--accent-success)', opacity: 0.25, borderLeft: '1px dashed rgba(255,255,255,0.2)' }} />}
+                                </div>
+                            </div>
+                            <div>
+                                <div className="flex-between" style={{ marginBottom: '4px' }}>
+                                    <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--accent-danger)' }}>Expenses</span>
+                                    <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{formatCurrency(cf.totalExpenses)}</span>
+                                </div>
+                                <div style={{ height: '10px', borderRadius: '5px', background: 'rgba(255,255,255,0.05)', display: 'flex', overflow: 'hidden' }}>
+                                    <div style={{ width: `${expActualPct}%`, background: 'var(--accent-danger)', opacity: 0.8, transition: 'width 0.6s ease' }} />
+                                    <div style={{ width: `${expExpectedPct}%`, background: 'var(--accent-danger)', opacity: 0.25, borderLeft: '1px dashed rgba(255,255,255,0.2)' }} />
+                                </div>
+                            </div>
+                            <div style={{ display: 'flex', gap: '16px', fontSize: '10px', color: 'var(--text-muted)' }}>
+                                <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}><span style={{ width: '12px', height: '6px', borderRadius: '3px', background: 'var(--text-muted)', opacity: 0.8 }} /> Actual</span>
+                                <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}><span style={{ width: '12px', height: '6px', borderRadius: '3px', background: 'var(--text-muted)', opacity: 0.25 }} /> Expected</span>
+                            </div>
+                        </div>
+
+                        {/* Pending expenses */}
+                        {cf.pendingExpenses?.length > 0 && (
+                            <div>
+                                <button
+                                    onClick={() => setPendingOpen(v => !v)}
+                                    style={{
+                                        background: 'none', border: '1px solid var(--border-light)', borderRadius: '8px',
+                                        color: 'var(--text-secondary)', padding: '8px 14px', cursor: 'pointer', width: '100%',
+                                        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                                        fontSize: '12px', fontWeight: 600, fontFamily: 'inherit',
+                                    }}
+                                >
+                                    <span>Upcoming Expenses ({cf.pendingExpenses.length} items · {formatCurrency(cf.expectedExpenses)})</span>
+                                    <span style={{ fontSize: '10px' }}>{showPending ? '▲' : '▼'}</span>
+                                </button>
+                                {showPending && (
+                                    <div style={{ marginTop: '8px', maxHeight: '200px', overflowY: 'auto' }}>
+                                        {cf.pendingExpenses.map((item, i) => (
+                                            <div key={i} className="flex-between" style={{ padding: '6px 8px', fontSize: '12px', borderBottom: '1px solid rgba(255,255,255,0.03)' }}>
+                                                <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                                                    <span style={{ color: 'var(--text-muted)', fontSize: '11px', minWidth: '65px' }}>
+                                                        {item.date ? new Date(item.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '—'}
+                                                    </span>
+                                                    <span style={{ color: 'var(--text-primary)' }}>{item.name}</span>
+                                                </div>
+                                                <span style={{ fontWeight: 600 }}>{formatCurrency(item.amount)}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        )}
+                    </div>
+                );
+            })()}
 
             {progress && (
                 <div

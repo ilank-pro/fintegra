@@ -184,6 +184,12 @@ function refreshDataPlugin() {
           writeJson('spending', JSON.stringify(current.spending, null, 2))
           addLog(`  Updated spending.json with ${current.spending.length} categories from current budget`)
 
+          // Write trajectory.json
+          if (current.trajectory) {
+            writeJson('trajectory', JSON.stringify(current.trajectory, null, 2))
+            addLog(`  Wrote trajectory.json: ${current.trajectory.categories.length} categories, ${current.trajectory.pctMonthElapsed}% elapsed`)
+          }
+
           // Add current month to trends if not already present
           const existingTrendsPath = join(dataDir, 'trends.json')
           let allTrends: any[] = []
