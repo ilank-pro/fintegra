@@ -1,4 +1,4 @@
-// Salary transactions (category "משכורת") in the last 4 days of a month
+// Salary transactions (category "משכורת") from the 25th onward
 // are treated as income for the following month.
 export function getBudgetMonth(transaction) {
     const date = transaction.date;
@@ -7,7 +7,7 @@ export function getBudgetMonth(transaction) {
 
     if (transaction.category === 'משכורת' || transaction.category === 'קצבאות') {
         const day = parseInt(date.slice(8, 10), 10);
-        if (day >= 28) {
+        if (day >= 25) {
             const [y, m] = month.split('-').map(Number);
             const next = new Date(y, m, 1); // m is already 1-based, so this gives next month
             return `${next.getFullYear()}-${String(next.getMonth() + 1).padStart(2, '0')}`;

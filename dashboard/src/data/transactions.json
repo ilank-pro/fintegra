@@ -2312,11 +2312,6200 @@
     "isIncome": false
   },
   {
-    "date": "2026-02-28",
+    "date": "2025-12-30",
+    "amount": 19369.95,
+    "businessName": "העברת משכורת",
+    "category": "משכורת",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 3.99,
+    "businessName": "פטור והנחה מדמי כרטיס",
+    "category": "עמלות",
+    "source": "leumicard",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 26715.84,
+    "businessName": "העברת משכורת",
+    "category": "משכורת",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 31.04,
+    "businessName": "עמל.ערוץ יש 32",
+    "category": "עמלות",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 14.85,
+    "businessName": "עמל.ערוץ יש  9",
+    "category": "עמלות",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 87.32,
+    "businessName": "חשבונית ירוקה",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 32.79,
+    "businessName": "PAYPAL *MYUS.COM       4029357733    US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 121,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 106,
+    "businessName": "מקור השפע חדש",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 16607,
+    "businessName": "ישרוטל רויאל ביץ ת\"א",
+    "category": "תיירות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 4088.72,
+    "businessName": "ישרוטל רויאל ביץ ת\"א",
+    "category": "תיירות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 9,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 7,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 10,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 173,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 393.17,
+    "businessName": "MASTERCLASS.COM/CHARGE MASTERCLASS.C US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 15,
+    "businessName": "בארים ומשקאות באירועים",
+    "category": "פנאי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 90,
+    "businessName": "PAYBOX",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-01",
+    "amount": 80,
+    "businessName": "רשות הדואר-רכישת מוצר דאר",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-02",
+    "amount": 217,
+    "businessName": "הדס פתרונות סינון בע\"מ",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-02",
+    "amount": 270.65,
+    "businessName": "AMAZON MKTPL*HV8794SW3 Amzn.com/bill US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-02",
+    "amount": 222.2,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-02",
+    "amount": 49.6,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-02",
+    "amount": 577.8,
+    "businessName": "בישולים בשרון",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-02",
+    "amount": 73,
+    "businessName": "ביסקוטי תל מונד",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-02",
+    "amount": 75,
+    "businessName": "פנגו- חניוני סנטרל",
+    "category": "רכב",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-02",
+    "amount": 85,
+    "businessName": "GETT",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-02",
+    "amount": 30,
+    "businessName": "בארים ומשקאות באירועים",
+    "category": "פנאי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-03",
+    "amount": 41,
+    "businessName": "סופר פארם מלחה",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-03",
+    "amount": 104,
+    "businessName": "סופר פארם מלחה",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-04",
+    "amount": 279.45,
+    "businessName": "קרן מכבי",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-04",
+    "amount": 14,
+    "businessName": "סופר גוניור 24 בע\"מ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-04",
+    "amount": 113,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-04",
+    "amount": 20,
+    "businessName": "עלם העמותה למען נוער במצב סיכון(ע\"ר)",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-04",
+    "amount": 8,
+    "businessName": "אילנס רכבת יצחק נבון\\ירושלים בנייני האומ",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-04",
+    "amount": 24,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-04",
+    "amount": 13,
+    "businessName": "אירוח והסעדה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-04",
+    "amount": 135,
+    "businessName": "שווארמה  זהר",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-04",
+    "amount": 11,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-05",
+    "amount": 243.29,
+    "businessName": "מכבי-י",
+    "category": "ביטוח",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-05",
+    "amount": 48,
+    "businessName": "מאפה נאמן",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-05",
+    "amount": 137,
+    "businessName": "תסביך פלאפל",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-05",
+    "amount": 61,
+    "businessName": "מאפה נאמן",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-05",
+    "amount": 7,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-05",
+    "amount": 250,
+    "businessName": "הפועלים-ביט",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2026-01-05",
+    "amount": 4495,
+    "businessName": "העברה דיגי700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-05",
+    "amount": 69,
+    "businessName": "אול מובייל תקשורת בע\"מ",
+    "category": "תקשורת",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-05",
+    "amount": 25,
+    "businessName": "קרביץ עזריאלי",
+    "category": "ציוד משרדי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-05",
+    "amount": 112,
+    "businessName": "צומת ספרים מלחה",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 482.92,
+    "businessName": "טרקלין חשמ - רלקו-גמא",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 949,
+    "businessName": "אונליין PC",
+    "category": "תשלומים",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 20,
+    "businessName": "סופר גוניור 24 בע\"מ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 118.49,
+    "businessName": "ויקטורי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 20,
+    "businessName": "למען ילדי ישראל",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 359.2,
+    "businessName": "NOVAKIDSCHOOL          NOVAKIDSCHOOL US",
+    "category": "חינוך",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 7,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 24,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 250,
+    "businessName": "העברה דיגי700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 1500,
+    "businessName": "העברה דיגי700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 1850,
+    "businessName": "העברה עצמית700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 56.64,
+    "businessName": "זיכוי עמ.הישיר",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 250,
+    "businessName": "העברה עצמית700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 2234,
+    "businessName": "העברה דיגי700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 70,
+    "businessName": "BIT",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 100,
+    "businessName": "העברה ב BIT בנה\"פ",
+    "category": "העברות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-07",
+    "amount": 1160.63,
+    "businessName": "מוסך  פרומוטורס בעמ-גמא",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-07",
+    "amount": 24,
+    "businessName": "טאבון הצועני בית מאפה בעמ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-07",
+    "amount": 82,
+    "businessName": "WOLT",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-07",
+    "amount": 47,
+    "businessName": "אמריקן פיצה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-07",
+    "amount": 420,
+    "businessName": "ארוחה בקליק",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-07",
+    "amount": 9,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-08",
+    "amount": 1500,
+    "businessName": "תדיראן מוצרי צריכה",
+    "category": "תשלומים",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-08",
+    "amount": 124.07,
+    "businessName": "HEROKU* DEC-109840320  WWW.HEROKU.CO US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-08",
+    "amount": 25.9,
+    "businessName": "PAYPAL *APPLE.COM/BILL 35314369001   GB",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-08",
+    "amount": 435,
+    "businessName": "BIT",
+    "category": "העברות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-08",
+    "amount": 261,
+    "businessName": "סטרדיווריוס עיר ימים",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-08",
+    "amount": 75,
+    "businessName": "אירוח והסעדה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-08",
+    "amount": 39,
+    "businessName": "אירוח והסעדה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-08",
+    "amount": 39,
+    "businessName": "בורגרס בר נתניה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-08",
+    "amount": 197,
+    "businessName": "דור אלון תל מונד",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-08",
+    "amount": 500,
+    "businessName": "שיק      10835",
+    "category": "שיק",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-08",
+    "amount": 24.48,
+    "businessName": "PAYPAL *ALIPAYSINGA    17280159199   SG",
+    "category": "כללי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-09",
+    "amount": 665,
+    "businessName": "אונליין PC",
+    "category": "תשלומים",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-09",
+    "amount": 233.25,
+    "businessName": "הראל-ביטוח בריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-09",
+    "amount": 24,
+    "businessName": "מאפיית הנביאים תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-09",
+    "amount": 124,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-09",
+    "amount": 30,
+    "businessName": "מקור השפע חדש",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-09",
+    "amount": 19,
+    "businessName": "מקור השפע חדש",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-09",
+    "amount": 258.5,
+    "businessName": "סלטי לירון בע''מ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-09",
+    "amount": 649.6,
+    "businessName": "בישולים בשרון",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-09",
+    "amount": 73,
+    "businessName": "ביסקוטי תל מונד",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-09",
+    "amount": 43,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-09",
+    "amount": 24,
+    "businessName": "חבוש בע\"מ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-09",
+    "amount": 100,
+    "businessName": "כרמל ישראל",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-10",
+    "amount": 230,
+    "businessName": "מבשר ציון ער",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-10",
+    "amount": 562.92,
+    "businessName": "פרעון        +30 אר",
+    "category": "עמלות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-11",
+    "amount": 23.9,
+    "businessName": "Google YouTube         650-2530000   US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-11",
+    "amount": 16.32,
+    "businessName": "PAYPAL *YAHOO MAIL PLU 4029357733    US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-11",
+    "amount": 8,
+    "businessName": "סופר גוניור 24 בע\"מ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-11",
+    "amount": 24,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-11",
+    "amount": 12,
+    "businessName": "בר כל טוב גילה",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-11",
+    "amount": 30,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-11",
+    "amount": 2.29,
+    "businessName": "עיגול להושיט יד",
+    "category": "תרומה",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-11",
+    "amount": 36,
+    "businessName": "חברים לרפואה",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-11",
+    "amount": 1460,
+    "businessName": "קבוצת רעות (-י",
+    "category": "תרומה",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-12",
+    "amount": 1550,
+    "businessName": "להב בע\"מ",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-12",
+    "amount": 41.47,
+    "businessName": "Amazon Digit*E44P72Q43 888-802-3080  US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-12",
+    "amount": 69.9,
+    "businessName": "NETFLIX.COM            Amsterdam     NL",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-12",
+    "amount": 12.9,
+    "businessName": "דמי כרטיס",
+    "category": "עמלות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-12",
+    "amount": 17.9,
+    "businessName": "דמי כרטיס",
+    "category": "עמלות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-12",
+    "amount": 169,
+    "businessName": "סופר פארם רוסו איטלי-צמרת",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-12",
+    "amount": 16,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-12",
+    "amount": 150,
+    "businessName": "תסביך פלאפל",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-12",
+    "amount": 370.52,
+    "businessName": "אלון תל יצחק",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-12",
+    "amount": 210.15,
+    "businessName": "סופר פארם תל מונד 196",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-12",
+    "amount": 137,
+    "businessName": "בי דראגסטורס דרורים",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-12",
+    "amount": 100,
+    "businessName": "PAYBOX",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-13",
+    "amount": 19.9,
+    "businessName": "KIDIWATCH",
+    "category": "תקשורת",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-13",
+    "amount": 19.44,
+    "businessName": "AMAZON PRIME*I71YW4YU3 888-802-3080  US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-13",
+    "amount": 12,
+    "businessName": "ויקטורי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-13",
+    "amount": 130,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-13",
+    "amount": 219,
+    "businessName": "הקוסקוס של גליה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-13",
+    "amount": 20,
+    "businessName": "ביסקוטי תל מונד בע\"מ",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-13",
+    "amount": 14,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-13",
+    "amount": 20,
+    "businessName": "קיי בי אס די נכסים ואחזקות בע\"מ",
+    "category": "ועד בית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-13",
+    "amount": 178,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-13",
+    "amount": 200,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-13",
+    "amount": 38,
+    "businessName": "תל מונד STOCK B",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-13",
+    "amount": 60.31,
+    "businessName": "PAYPAL *NAMECHEAP      4029357733    US",
+    "category": "כללי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-13",
+    "amount": 300,
+    "businessName": "BIT",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 171,
+    "businessName": "טאבון הצועני בית מאפה בעמ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 11,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 16,
+    "businessName": "אלונית תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 908.61,
+    "businessName": "ישרוטל רויאל ביץ ת\"א",
+    "category": "תיירות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 11,
+    "businessName": "אילנס רכבת-בית יהושע",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 10,
+    "businessName": "אילנס רכבת-בית יהושע",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 10,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 9,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 317,
+    "businessName": "דור אלון תל מונד",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 20,
+    "businessName": "קיי בי אס די נכסים ואחזקות בע\"מ",
+    "category": "ועד בית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 70,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 65,
+    "businessName": "Gett",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 270,
+    "businessName": "העברה עצמית700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 600,
+    "businessName": "לאומי לישראל",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-15",
+    "amount": 2224,
+    "businessName": "מועצה מקומית תל מונד - הו\"ק",
+    "category": "ארנונה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-15",
+    "amount": 8,
+    "businessName": "Google One",
+    "category": "דיגיטל",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-15",
+    "amount": 1800,
+    "businessName": "מיטב דש גמל-י",
+    "category": "השקעה וחיסכון",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-15",
+    "amount": 7678.57,
+    "businessName": "לאומי למשכנת-י",
+    "category": "משכנתא",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-15",
+    "amount": 379,
+    "businessName": "carrefour תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-15",
+    "amount": 186,
+    "businessName": "הקוסקוס של גליה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-15",
+    "amount": 140,
+    "businessName": "(תנועת בני עקיבא בישראל )",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-15",
+    "amount": 9,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-15",
+    "amount": 85,
+    "businessName": "WOLT",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-15",
+    "amount": 300,
+    "businessName": "העברה עצמית700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2026-01-15",
+    "amount": 101,
+    "businessName": "סאג- ' אלפי כלים בע\"מ",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-15",
+    "amount": 297,
+    "businessName": "חייל מצטיין בע\"מ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-16",
+    "amount": 101.17,
+    "businessName": "ישיר ביטוח חובה",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-16",
+    "amount": 176.23,
+    "businessName": "HOT",
+    "category": "תקשורת",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-16",
+    "amount": 3.9,
+    "businessName": "PAYPAL *APPLE.COM/BILL 35314369001   GB",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-16",
+    "amount": 2144.33,
+    "businessName": "מלון כפר הנופש רמות",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-16",
+    "amount": 62,
+    "businessName": "ויקטורי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-16",
+    "amount": 555.3,
+    "businessName": "בישולים בשרון",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-16",
+    "amount": 40,
+    "businessName": "מאפיית הנביאים תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-16",
+    "amount": 244.51,
+    "businessName": "נשי אמי\"ת -ע-י",
+    "category": "תרומה",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-16",
+    "amount": 75,
+    "businessName": "ביסקוטי תל מונד",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-16",
+    "amount": 306.27,
+    "businessName": "Amazon.com*SJ3JX3ON3   Amzn.com/bill US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-17",
+    "amount": 13.9,
+    "businessName": "PAYPAL *KESHETBROAD",
+    "category": "דיגיטל",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-17",
+    "amount": 8,
+    "businessName": "Google One             650-2530000   US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-17",
+    "amount": 65.1,
+    "businessName": "OPENAI *CHATGPT SUBSCR OPENAI.COM    US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-18",
+    "amount": 3.99,
+    "businessName": "בזק בינלאומי בע\"מ",
+    "category": "תקשורת",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-18",
+    "amount": 98.58,
+    "businessName": "פלאפון חשבון תקופתי",
+    "category": "תקשורת",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-18",
+    "amount": 75,
+    "businessName": "בר כל טוב גילה",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-18",
+    "amount": 9134.39,
+    "businessName": "airlines ELAL INT Israel",
+    "category": "תיירות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-18",
+    "amount": 24,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-18",
+    "amount": 35,
+    "businessName": "גאדג'ט ליין",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-18",
+    "amount": 122.9,
+    "businessName": "לוטו שלי",
+    "category": "פנאי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-18",
+    "amount": 47.62,
+    "businessName": "aliexpress",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-18",
+    "amount": 170,
+    "businessName": "BIT",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-19",
+    "amount": 24000,
+    "businessName": "שיק      31039",
+    "category": "שיק",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-19",
+    "amount": 4200,
+    "businessName": "בנק אוצר החיל",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2026-01-19",
+    "amount": 3.9,
+    "businessName": "PAYPAL *APPLE.COM/BILL 35314369001   GB",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-19",
+    "amount": 350,
+    "businessName": "בנפיט- הו\"ק",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-19",
+    "amount": 79,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-19",
+    "amount": 25,
+    "businessName": "פיקס",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-19",
+    "amount": 41,
+    "businessName": "סטרדיווריוס רננים",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-19",
+    "amount": 26,
+    "businessName": "יאנגה",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-19",
+    "amount": 120,
+    "businessName": "מנגו רננים",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-19",
+    "amount": 14,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-19",
+    "amount": 55,
+    "businessName": "ניו דלי קניון רננים",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-19",
+    "amount": 1.63,
+    "businessName": "MYIQ.COM/US",
+    "category": "דיגיטל",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-19",
+    "amount": 116,
+    "businessName": "GO OUT כרטיסים",
+    "category": "פנאי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-20",
+    "amount": 236.35,
+    "businessName": "מגדל חיים/בריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-20",
+    "amount": 276,
+    "businessName": "קצבת ילדים-י",
+    "category": "קצבאות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2026-01-20",
+    "amount": 28.95,
+    "businessName": "בזק הוראות קבע",
+    "category": "תקשורת",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-20",
+    "amount": 105,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-20",
+    "amount": 1650,
+    "businessName": "בית ועד הר חברון -הו\"ק",
+    "category": "העברות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-20",
+    "amount": 78,
+    "businessName": "מסעדת אמא",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-20",
+    "amount": 79,
+    "businessName": "מסעדת אמא",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-20",
+    "amount": 64,
+    "businessName": "ביסקוטי תל מונד בע\"מ",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-20",
+    "amount": 12,
+    "businessName": "אבידור חניונים וניהול בע\"מ",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-20",
+    "amount": 115,
+    "businessName": "סופר פארם רמז נתניה",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-20",
+    "amount": 55,
+    "businessName": "Gett",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-20",
+    "amount": 322.83,
+    "businessName": "APPLE.COM/US           800-676-2775  US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-20",
+    "amount": 15,
+    "businessName": "PAYBOX",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-21",
+    "amount": 64.7,
+    "businessName": "CLAUDE.AI SUBSCRIPTION ANTHROPIC.COM US",
+    "category": "כללי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-21",
+    "amount": 204.1,
+    "businessName": "HOT mobile הו\"ק",
+    "category": "תקשורת",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-21",
+    "amount": 89,
+    "businessName": "אריה מרקט",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-21",
+    "amount": 47,
+    "businessName": "אמריקן פיצה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-21",
+    "amount": 9,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-21",
+    "amount": 16,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-21",
+    "amount": 102.8,
+    "businessName": "כביש 6",
+    "category": "רכב",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-21",
+    "amount": 27.25,
+    "businessName": "כביש 6",
+    "category": "רכב",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-21",
+    "amount": 60,
+    "businessName": "רשות הדואר דרכון עד הבית",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-22",
+    "amount": 280,
+    "businessName": "אלקטרה פאוור סופרגז",
+    "category": "חשמל",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-22",
+    "amount": 251,
+    "businessName": "הקוסקוס של גליה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-22",
+    "amount": 3,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-22",
+    "amount": 93,
+    "businessName": "WOLT",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-23",
+    "amount": 6.49,
+    "businessName": "PAYPAL *NY TIMES NYTIM 4029357733    US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-23",
+    "amount": 77.38,
+    "businessName": "RESUME-NOW.COM         844-351-7484  PR",
+    "category": "כללי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-23",
+    "amount": 26,
+    "businessName": "רד אחוזה",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-23",
+    "amount": 266.56,
+    "businessName": "carrefour תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-23",
+    "amount": 200,
+    "businessName": "לאומי לישראל",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-23",
+    "amount": 56.8,
+    "businessName": "קליית יבגי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-23",
+    "amount": 664.8,
+    "businessName": "בישולים בשרון",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-23",
+    "amount": 42,
+    "businessName": "מאפיית הנביאים תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-23",
+    "amount": 9,
+    "businessName": "מאפה נאמן תחנה מרכזית",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-23",
+    "amount": 99,
+    "businessName": "ביסקוטי תל מונד",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-23",
+    "amount": 88,
+    "businessName": "סאג- ' אלפי כלים בע\"מ",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-24",
+    "amount": 47,
+    "businessName": "אמריקן פיצה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-24",
+    "amount": 2,
+    "businessName": "דודא לפיצה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 190.53,
+    "businessName": "AMAZON MKTPL*5Z6QC8M93 Amzn.com/bill US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 32,
+    "businessName": "באגטינה",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 3,
+    "businessName": "דמי חבר שופרסל",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 10,
+    "businessName": "סופר גוניור 24 בע\"מ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 31,
+    "businessName": "סופר גוניור 24 בע\"מ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 228,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 36,
+    "businessName": "עמותת אל-סם",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 115,
+    "businessName": "מתנס תל מונד",
+    "category": "חינוך",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 33,
+    "businessName": "מאפה נאמן תחנה מרכזית",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 301,
+    "businessName": "מ.תחבורה - פנגו מוביט",
+    "category": "תחבורה ציבורית",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 21,
+    "businessName": "מ.תחבורה - פנגו מוביט",
+    "category": "תחבורה ציבורית",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 128,
+    "businessName": "מ. התחבורה - פנגו מוביט",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 92,
+    "businessName": "מ. התחבורה - פנגו מוביט",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 470,
+    "businessName": "העברה עצמית700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 390,
+    "businessName": "PAYBOX",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 199,
+    "businessName": "JERUSALEM POST LTD",
+    "category": "דיגיטל",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 112.25,
+    "businessName": "AIG רכב חובה",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 35.2,
+    "businessName": "שירותי גלישה בטוחה",
+    "category": "תקשורת",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 66.18,
+    "businessName": "הראל-ביטוח בריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 60,
+    "businessName": "פיס מנויים",
+    "category": "כללי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 109.9,
+    "businessName": "עיתון מקור ראשון שותפות מ",
+    "category": "כללי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 30.12,
+    "businessName": "AIG ביטוח חיים / בריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 186.78,
+    "businessName": "AIG תאונות ובריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 948.67,
+    "businessName": "AIG ביטוח חיים / בריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 93.63,
+    "businessName": "AIG ביטוח חיים / בריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 35,
+    "businessName": "בר כל טוב גילה",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 299,
+    "businessName": "הקוסקוס של גליה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 33,
+    "businessName": "מאפה נאמן",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 58,
+    "businessName": "מאפה נאמן",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 6,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 243,
+    "businessName": "קפה גרג מלחה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 52,
+    "businessName": "מאמאמיה טעמים של בית בע''מ",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 9,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 6,
+    "businessName": "חניון קניון עזריאלי ירושלים",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-26",
+    "amount": 50,
+    "businessName": "Gett",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 226.43,
+    "businessName": "ביטוח ישיר ביטוח רכב",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 369.32,
+    "businessName": "איי אי ג'י-ביטוח רכב",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 93.28,
+    "businessName": "איי אי גי ביטוח דירה",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 3.9,
+    "businessName": "PAYPAL *APPLE.COM/BILL 35314369001   GB",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 154,
+    "businessName": "הראל-ביטוח דירה",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 22.2,
+    "businessName": "carrefour תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 162.54,
+    "businessName": "carrefour תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 9,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 41,
+    "businessName": "מקדונלדס תל-מונד",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 45.6,
+    "businessName": "פנגו חשבונית חודשית",
+    "category": "רכב",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 20,
+    "businessName": "פנגו חשבונית חודשית",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 155,
+    "businessName": "דור אלון בני דרור",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 4.9,
+    "businessName": "פנגו חשבונית חודשית",
+    "category": "רכב",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 340,
+    "businessName": "פז  /YELLOW עין ורד",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 290,
+    "businessName": "העברה עצמית700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 158.3,
+    "businessName": "PAYPAL *SHADOWTRADE    4029357733    US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 47,
+    "businessName": "סאג- ' אלפי כלים בע\"מ",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-28",
+    "amount": 122.9,
+    "businessName": "הפניקס חיים ובריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-28",
+    "amount": 73.36,
+    "businessName": "הפניקס חיים ובריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-28",
+    "amount": 15.91,
+    "businessName": "ENTREPRENEUR MEDIA INC ENTREPRENEUR. US",
+    "category": "כלכלה",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-28",
+    "amount": 58,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-28",
+    "amount": 10,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-28",
+    "amount": 10,
+    "businessName": "נקסט עיר ימים",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-28",
+    "amount": 191,
+    "businessName": "זארה עיר ימים",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-28",
+    "amount": 33,
+    "businessName": "מיסטר קורן עיר ימים",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-28",
+    "amount": 1000,
+    "businessName": "לאומי לישראל",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-29",
+    "amount": 228.79,
+    "businessName": "AMAZON MKTPL*O25CX5QT3 Amzn.com/bill US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-29",
+    "amount": 176.9,
+    "businessName": "לוטו שלי",
+    "category": "פנאי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-29",
+    "amount": 122.9,
+    "businessName": "לוטו שלי",
+    "category": "פנאי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-29",
+    "amount": 72,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-29",
+    "amount": 31,
+    "businessName": "קליית יבגי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-29",
+    "amount": 57,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-29",
+    "amount": 9,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-29",
+    "amount": 33,
+    "businessName": "אירוח והסעדה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-29",
+    "amount": 50,
+    "businessName": "תסביך פלאפל",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-29",
+    "amount": 715.68,
+    "businessName": "אלקטרה פאוור",
+    "category": "חשמל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 24,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 284,
+    "businessName": "carrefour תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 14,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 79.8,
+    "businessName": "קליית יבגי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 521.2,
+    "businessName": "בישולים בשרון",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 294,
+    "businessName": "וורהאוס ביגוד ואופנה בע\"מ",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 10,
+    "businessName": "שניצלס",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 28,
+    "businessName": "ביסקוטי תל מונד בע\"מ",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 75,
+    "businessName": "ביסקוטי תל מונד",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 680,
+    "businessName": "כהן טוביה חשמל רכב",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 102,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 10,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 146,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 40,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "זיכויים",
+    "source": "cal",
+    "isIncome": true
+  },
+  {
+    "date": "2026-01-31",
     "amount": 19.89,
     "businessName": "דמי כרטיס",
     "category": "עמלות",
     "source": "leumicard",
     "isIncome": false
+  },
+  {
+    "date": "2026-01-31",
+    "amount": 20,
+    "businessName": "דמי כרטיס",
+    "category": "עמלות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-11-26",
+    "amount": 19369.95,
+    "businessName": "העברת משכורת",
+    "category": "משכורת",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-11-30",
+    "amount": 3.99,
+    "businessName": "פטור והנחה מדמי כרטיס",
+    "category": "עמלות",
+    "source": "leumicard",
+    "isIncome": true
+  },
+  {
+    "date": "2025-11-30",
+    "amount": 26651.85,
+    "businessName": "העברת משכורת",
+    "category": "משכורת",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-01",
+    "amount": 87.32,
+    "businessName": "חשבונית ירוקה",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-01",
+    "amount": 23.28,
+    "businessName": "עמל.ערוץ יש 24",
+    "category": "עמלות",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-01",
+    "amount": 18.15,
+    "businessName": "עמל.ערוץ יש 11",
+    "category": "עמלות",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-01",
+    "amount": 105,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-01",
+    "amount": 177.53,
+    "businessName": "DELIVEROO",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-01",
+    "amount": 12.69,
+    "businessName": "TFL TRAVEL CH",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-01",
+    "amount": 4.37,
+    "businessName": "DELIVEROO",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-01",
+    "amount": 146.56,
+    "businessName": "DELIVEROO",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-01",
+    "amount": 66,
+    "businessName": "ביסקוטי תל מונד בע\"מ",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-01",
+    "amount": 51,
+    "businessName": "מאמאמיה טעמים של בית בע''מ",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-01",
+    "amount": 8,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-01",
+    "amount": 69,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-01",
+    "amount": 300,
+    "businessName": "BIT",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-01",
+    "amount": 466.3,
+    "businessName": "AMAZON PRIME*BB0JS57F2 Amzn.com/bill US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-02",
+    "amount": 247.63,
+    "businessName": "קרן מכבי",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-02",
+    "amount": 213,
+    "businessName": "הדס פתרונות סינון בע\"מ",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-02",
+    "amount": 33.71,
+    "businessName": "PAYPAL *MYUS.COM       4029357733    US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-02",
+    "amount": 14,
+    "businessName": "סופר גוניור 24 בע\"מ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-02",
+    "amount": 36,
+    "businessName": "ארגון רבני צהר",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-02",
+    "amount": 60,
+    "businessName": "מאץ ריטייל בע\"מ H&M רעננה",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-02",
+    "amount": 100,
+    "businessName": "טופ טן",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-02",
+    "amount": 161,
+    "businessName": "סטרדיווריוס רננים",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-02",
+    "amount": 25.36,
+    "businessName": "TFL TRAVEL CH",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-02",
+    "amount": 79.76,
+    "businessName": "DELIVEROO",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-02",
+    "amount": 225.56,
+    "businessName": "DELIVEROO",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-02",
+    "amount": 14,
+    "businessName": "הוט סינמה כפר סבא",
+    "category": "פנאי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-02",
+    "amount": 23,
+    "businessName": "הוט סינמה כפר סבא",
+    "category": "פנאי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-02",
+    "amount": 152,
+    "businessName": "חנות החוויות כאל",
+    "category": "פנאי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-03",
+    "amount": 43,
+    "businessName": "מינימרקט מזל ברכה",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-03",
+    "amount": 371.41,
+    "businessName": "carrefour תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-03",
+    "amount": 39.18,
+    "businessName": "TFL TRAVEL CH",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-03",
+    "amount": 158.82,
+    "businessName": "DELIVEROO",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-03",
+    "amount": 51,
+    "businessName": "מאמאמיה טעמים של בית בע''מ",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-03",
+    "amount": 12,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-03",
+    "amount": 286.13,
+    "businessName": "SEPHORA UK",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-03",
+    "amount": 53,
+    "businessName": "סאג- ' אלפי כלים בע\"מ",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-03",
+    "amount": 280,
+    "businessName": "העברה ב BIT בנה\"פ",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-03",
+    "amount": 25,
+    "businessName": "UPAPP",
+    "category": "ספורט",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-04",
+    "amount": 123,
+    "businessName": "שיפודי הכיכר",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-04",
+    "amount": 665,
+    "businessName": "אכסנית נוער בית שאן",
+    "category": "תיירות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-04",
+    "amount": 12.28,
+    "businessName": "TFL TRAVEL CH",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-04",
+    "amount": 260,
+    "businessName": "העברה ב BIT בנה\"פ",
+    "category": "העברות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-04",
+    "amount": 7352.09,
+    "businessName": "THE LONDONER LONDON",
+    "category": "תיירות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-04",
+    "amount": 44,
+    "businessName": "אילנס רכבת יצחק נבון\\ירושלים בנייני האומ",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-04",
+    "amount": 84,
+    "businessName": "WOLT",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-04",
+    "amount": 9,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-04",
+    "amount": 10,
+    "businessName": "סרוסי מרדכי - דשא גן ניהו",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-04",
+    "amount": 12,
+    "businessName": "קבוץ מעלה גלבוע",
+    "category": "ארנונה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-05",
+    "amount": 237.31,
+    "businessName": "מכבי-י",
+    "category": "ביטוח",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-05",
+    "amount": 61,
+    "businessName": "קליית יבגי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-05",
+    "amount": 414.5,
+    "businessName": "בישולים בשרון",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-05",
+    "amount": 40,
+    "businessName": "מאפיית הנביאים תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-05",
+    "amount": 56,
+    "businessName": "טעמה - קפה קונדיטוריה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-05",
+    "amount": 84,
+    "businessName": "יודאיקה תשמישי קדושה",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-06",
+    "amount": 949,
+    "businessName": "אונליין PC",
+    "category": "תשלומים",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-06",
+    "amount": 482.92,
+    "businessName": "טרקלין חשמ - רלקו-גמא",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-06",
+    "amount": 210,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-06",
+    "amount": 700,
+    "businessName": "טרקר-למטייל ולחייל בעמ",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-07",
+    "amount": 226.7,
+    "businessName": "AMAZON MKTPL*BI0OH1YC1 Amzn.com/bill US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-07",
+    "amount": 1160.63,
+    "businessName": "מוסך  פרומוטורס בעמ-גמא",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-07",
+    "amount": 50,
+    "businessName": "(תנועת בני עקיבא בישראל )",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-07",
+    "amount": 79,
+    "businessName": "אירוח והסעדה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-07",
+    "amount": 66,
+    "businessName": "מאמאמיה טעמים של בית בע''מ",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-07",
+    "amount": 9,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-07",
+    "amount": 16,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-07",
+    "amount": 182,
+    "businessName": "סופרפארם קניון רננים",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-07",
+    "amount": 90,
+    "businessName": "מובילנד בתי קולנוע בעמ",
+    "category": "פנאי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-07",
+    "amount": 71,
+    "businessName": "מובילנד בתי קולנוע בעמ",
+    "category": "פנאי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-08",
+    "amount": 1500,
+    "businessName": "תדיראן מוצרי צריכה",
+    "category": "תשלומים",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-08",
+    "amount": 25.9,
+    "businessName": "PAYPAL *APPLE.COM/BILL 35314369001   GB",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-08",
+    "amount": 125.75,
+    "businessName": "HEROKU* NOV-109329724  WWW.HEROKU.CO US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-08",
+    "amount": 8,
+    "businessName": "סופר גוניור 24 בע\"מ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-08",
+    "amount": 205,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-08",
+    "amount": 35,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-08",
+    "amount": 199,
+    "businessName": "פול רננים",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-08",
+    "amount": 65,
+    "businessName": "סיציליאנו רעננה רננים",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-08",
+    "amount": 100,
+    "businessName": "תסביך פלאפל",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-08",
+    "amount": 81,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-08",
+    "amount": 510,
+    "businessName": "הפועלים-ביט",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-08",
+    "amount": 550,
+    "businessName": "PAYBOX",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-08",
+    "amount": 253,
+    "businessName": "תל מונד STOCK B",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-09",
+    "amount": 665,
+    "businessName": "אונליין PC",
+    "category": "תשלומים",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-09",
+    "amount": 38,
+    "businessName": "ויקטורי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-09",
+    "amount": 359.2,
+    "businessName": "NOVAKIDSCHOOL          NOVAKIDSCHOOL US",
+    "category": "חינוך",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-09",
+    "amount": 18,
+    "businessName": "שבי חברון",
+    "category": "חינוך",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-09",
+    "amount": 195.9,
+    "businessName": "WOLT",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-09",
+    "amount": 177,
+    "businessName": "עוף אנד רול בע\"מ",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-09",
+    "amount": 6,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-09",
+    "amount": 12,
+    "businessName": "נאייקס ישראל חניונים",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-09",
+    "amount": 113,
+    "businessName": "סופר פארם אחוזה רעננה",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-09",
+    "amount": 148.26,
+    "businessName": "PAYPAL *BLUEHOSTCOM    4029357733    US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-10",
+    "amount": 187.5,
+    "businessName": "הראל-ביטוח בריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-10",
+    "amount": 66.5,
+    "businessName": "CURSOR, AI POWERED IDE CURSOR.COM    US",
+    "category": "כללי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-10",
+    "amount": 361,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-10",
+    "amount": 27,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-10",
+    "amount": 64,
+    "businessName": "מקור השפע חדש",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-10",
+    "amount": 2.67,
+    "businessName": "עיגול להושיט יד",
+    "category": "תרומה",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-10",
+    "amount": 230,
+    "businessName": "מבשר ציון-פאיימי",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-10",
+    "amount": 91,
+    "businessName": "ברד אנד ברקפסט",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-10",
+    "amount": 31,
+    "businessName": "חניון גירון רעננה",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-10",
+    "amount": 188,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-10",
+    "amount": 175,
+    "businessName": "BIT",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-10",
+    "amount": 20,
+    "businessName": "עלה",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-11",
+    "amount": 23.9,
+    "businessName": "Google YouTube         650-2530000   US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-11",
+    "amount": 175,
+    "businessName": "ויקטורי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-11",
+    "amount": 24,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-11",
+    "amount": 25,
+    "businessName": "סנטרל פארק  - אבן זיו",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-11",
+    "amount": 348,
+    "businessName": "דור אלון תל מונד",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-11",
+    "amount": 280,
+    "businessName": "העברה עצמית700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-11",
+    "amount": 70,
+    "businessName": "BIT",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-11",
+    "amount": 18,
+    "businessName": "רגע מתוק",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-12",
+    "amount": 12.9,
+    "businessName": "דמי כרטיס",
+    "category": "עמלות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-12",
+    "amount": 17.9,
+    "businessName": "דמי כרטיס",
+    "category": "עמלות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-12",
+    "amount": 69.9,
+    "businessName": "NETFLIX.COM            408-724-9160  NL",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-12",
+    "amount": 16.62,
+    "businessName": "PAYPAL *YAHOO MAIL PLU 4029357733    US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-12",
+    "amount": 42.24,
+    "businessName": "Amazon Digit*JD96K2NC3 888-802-3080  US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-12",
+    "amount": 1550,
+    "businessName": "להב בע\"מ",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-12",
+    "amount": 175,
+    "businessName": "מאפיית הנביאים תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-12",
+    "amount": 148,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-12",
+    "amount": 637.4,
+    "businessName": "בישולים בשרון",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-12",
+    "amount": 1460,
+    "businessName": "קבוצת רעות (-י",
+    "category": "תרומה",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-12",
+    "amount": 220,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-13",
+    "amount": 19.9,
+    "businessName": "KIDIWATCH",
+    "category": "תקשורת",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-13",
+    "amount": 19.8,
+    "businessName": "AMAZON PRIME*JL0HK2NS3 888-802-3080  US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-14",
+    "amount": 35,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-14",
+    "amount": 18,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-14",
+    "amount": 133,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-14",
+    "amount": 3400,
+    "businessName": "הפועלים-ביט",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-15",
+    "amount": 8,
+    "businessName": "Google One",
+    "category": "דיגיטל",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-15",
+    "amount": 1800,
+    "businessName": "מיטב דש גמל-י",
+    "category": "השקעה וחיסכון",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-15",
+    "amount": 7696.43,
+    "businessName": "לאומי למשכנת-י",
+    "category": "משכנתא",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-15",
+    "amount": 40,
+    "businessName": "וורהאוס ביגוד ואופנה בע\"מ",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-15",
+    "amount": 30,
+    "businessName": "מקדונלדס תל-מונד",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-15",
+    "amount": 62,
+    "businessName": "אילנס רכבת יצחק נבון\\ירושלים בנייני האומ",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-15",
+    "amount": 19,
+    "businessName": "אירוח והסעדה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-15",
+    "amount": 135,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-15",
+    "amount": 2521.37,
+    "businessName": "קינג הדס רו\"-י",
+    "category": "כללי",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-15",
+    "amount": 8809,
+    "businessName": "מס הכנסה עצמ-י",
+    "category": "מס הכנסה",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-15",
+    "amount": 30,
+    "businessName": "קליק פון  בע\"מ",
+    "category": "תקשורת",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-16",
+    "amount": 101.17,
+    "businessName": "ישיר ביטוח חובה",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-16",
+    "amount": 176.23,
+    "businessName": "HOT",
+    "category": "תקשורת",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-16",
+    "amount": 3.9,
+    "businessName": "PAYPAL *APPLE.COM/BILL 35314369001   GB",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-16",
+    "amount": 244.5,
+    "businessName": "נשי אמי\"ת -ע-י",
+    "category": "תרומה",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-16",
+    "amount": 12,
+    "businessName": "מלון כפר הנופש רמות",
+    "category": "תיירות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-16",
+    "amount": 2144.34,
+    "businessName": "מלון כפר הנופש רמות",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-16",
+    "amount": 95,
+    "businessName": "WOLT",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-16",
+    "amount": 654,
+    "businessName": "הבקתה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-16",
+    "amount": 358.99,
+    "businessName": "דור - בני דרור",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-16",
+    "amount": 70,
+    "businessName": "BIT",
+    "category": "העברות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 4200,
+    "businessName": "בנק אוצר החיל",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 66.29,
+    "businessName": "OPENAI *CHATGPT SUBSCR OPENAI.COM    US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 8,
+    "businessName": "Google One             650-2530000   US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 3.99,
+    "businessName": "בזק בינלאומי בע\"מ",
+    "category": "תקשורת",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 13.9,
+    "businessName": "PAYPAL *KESHETBROAD",
+    "category": "דיגיטל",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 119.41,
+    "businessName": "AMAZON MKTPL*1Y1SZ9YR3 Amzn.com/bill US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 78,
+    "businessName": "שופרסל דיל קצרין",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 21.9,
+    "businessName": "שופרסל דיל קצרין",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 12,
+    "businessName": "מלון כפר הנופש רמות",
+    "category": "תיירות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 685,
+    "businessName": "מבשלת הגולן בע\"מ",
+    "category": "פנאי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 36,
+    "businessName": "מלאכים",
+    "category": "כללי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 22,
+    "businessName": "רשות הטבע והגנים גמלא",
+    "category": "השקעה וחיסכון",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 156,
+    "businessName": "רשות הטבע והגנים גמלא",
+    "category": "השקעה וחיסכון",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 93.9,
+    "businessName": "PAYPAL *APPLE.COM/BILL 35314369001   GB",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-18",
+    "amount": 85.38,
+    "businessName": "פלאפון חשבון תקופתי",
+    "category": "תקשורת",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-18",
+    "amount": 59,
+    "businessName": "מלון כפר הנופש רמות",
+    "category": "תיירות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-18",
+    "amount": 437.9,
+    "businessName": "WOLT",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-18",
+    "amount": 1,
+    "businessName": "ארוחה בקליק",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-18",
+    "amount": 39,
+    "businessName": "טן-פלוס עילבון",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-18",
+    "amount": 8,
+    "businessName": "טן-פלוס עילבון",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-18",
+    "amount": 67.96,
+    "businessName": "AMAZON MKTPL*4X41Y01J3 Amzn.com/bill US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-19",
+    "amount": 3.9,
+    "businessName": "PAYPAL *APPLE.COM/BILL 35314369001   GB",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-19",
+    "amount": 350,
+    "businessName": "בנפיט- הו\"ק",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-19",
+    "amount": 23.67,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-19",
+    "amount": 70,
+    "businessName": "קליית יבגי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-19",
+    "amount": 666.6,
+    "businessName": "בישולים בשרון",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-19",
+    "amount": 48,
+    "businessName": "מאפיית הנביאים תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-19",
+    "amount": 97,
+    "businessName": "ביסקוטי תל מונד",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-19",
+    "amount": 249,
+    "businessName": "חבוש בע\"מ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-19",
+    "amount": 35,
+    "businessName": "סאג- ' אלפי כלים בע\"מ",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-19",
+    "amount": 3000,
+    "businessName": "לאומי לישראל",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-19",
+    "amount": 99,
+    "businessName": "דניאל ספרים גרופ",
+    "category": "קניות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-20",
+    "amount": 236.34,
+    "businessName": "מגדל חיים/בריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-20",
+    "amount": 47,
+    "businessName": "אמריקן פיצה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 198.08,
+    "businessName": "HOT mobile הו\"ק",
+    "category": "תקשורת",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 269,
+    "businessName": "קצבת ילדים-י",
+    "category": "קצבאות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 28.95,
+    "businessName": "בזק הוראות קבע",
+    "category": "תקשורת",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 66.04,
+    "businessName": "CLAUDE.AI SUBSCRIPTION ANTHROPIC.COM US",
+    "category": "כללי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 126,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 189.02,
+    "businessName": "קצבייה פמלי מרקט",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 20,
+    "businessName": "י ת ד ילדי תסמונת דאון",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 91,
+    "businessName": "זארה עיר ימים",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 60,
+    "businessName": "פול עיר ימים",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 3,
+    "businessName": "פיצה שמש תל מונד",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 11,
+    "businessName": "פיצה איטליאן",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 8,
+    "businessName": "פיצה שמש תל מונד",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 64,
+    "businessName": "תסביך פלאפל",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 125.07,
+    "businessName": "כביש 6",
+    "category": "רכב",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 83.24,
+    "businessName": "כביש 6",
+    "category": "רכב",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 22.46,
+    "businessName": "החזר פריים",
+    "category": "הלוואה",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 250,
+    "businessName": "העברה עצמית700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 180,
+    "businessName": "ביליבונג עור ומים",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-22",
+    "amount": 24,
+    "businessName": "פז /YELLOW אורלי",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-22",
+    "amount": 57,
+    "businessName": "בי דראגסטורס רעננה",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-22",
+    "amount": 20,
+    "businessName": "בי דראגסטורס רעננה",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-22",
+    "amount": 27,
+    "businessName": "רכבת ישראל-בית יהושוע",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-22",
+    "amount": 27,
+    "businessName": "רכבת ישראל-חיפה-מרכז השמונה",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-22",
+    "amount": 120,
+    "businessName": "BIT",
+    "category": "העברות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-23",
+    "amount": 34,
+    "businessName": "טאבון הצועני בית מאפה בעמ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-23",
+    "amount": 55,
+    "businessName": "אמריקן פיצה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-23",
+    "amount": 1250,
+    "businessName": "בנק מזרחי",
+    "category": "הלוואה",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-23",
+    "amount": 1250,
+    "businessName": "בנק הפועלים",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-23",
+    "amount": 500,
+    "businessName": "העברה דיגי700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-24",
+    "amount": 35.2,
+    "businessName": "שירותי גלישה בטוחה",
+    "category": "תקשורת",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-24",
+    "amount": 21,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-24",
+    "amount": 19,
+    "businessName": "ויקטורי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-24",
+    "amount": 291.29,
+    "businessName": "carrefour תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-24",
+    "amount": 1650,
+    "businessName": "בית ועד הר חברון -הו\"ק",
+    "category": "העברות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-24",
+    "amount": 1250,
+    "businessName": "העברה דיגי700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-24",
+    "amount": 1250,
+    "businessName": "בנק מזרחי",
+    "category": "הלוואה",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-24",
+    "amount": 191.09,
+    "businessName": "PADDLE.NET* CHATBOTAI  LONDON        GB",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-24",
+    "amount": 6.99,
+    "businessName": "PAYPAL *GODADDY.COM    4029357733    US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 60,
+    "businessName": "פיס מנויים",
+    "category": "כללי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 66.49,
+    "businessName": "הראל-ביטוח בריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 13,
+    "businessName": "סופר גוניור 24 בע\"מ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 3,
+    "businessName": "דמי חבר שופרסל",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 56,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 36,
+    "businessName": "עמותת אל-סם",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 54,
+    "businessName": "אקים ישראל בעמ",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 205,
+    "businessName": "וורהאוס ביגוד ואופנה בע\"מ",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 56,
+    "businessName": "סטרדיווריוס רננים",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 230,
+    "businessName": "מתנס תל מונד",
+    "category": "חינוך",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 12,
+    "businessName": "ארומה רננים",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 27,
+    "businessName": "רי באר G כפר סבא",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 340,
+    "businessName": "פז  /YELLOW עין ורד",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 35,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 40,
+    "businessName": "מ. התחבורה - פנגו מוביט",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 32,
+    "businessName": "מ. התחבורה - פנגו מוביט",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 90,
+    "businessName": "כלבו מורן",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 98,
+    "businessName": "זמן יצירה",
+    "category": "פנאי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 20,
+    "businessName": "תל מונד STOCK B",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-25",
+    "amount": 42,
+    "businessName": "פלנט באולינג בעמ",
+    "category": "פנאי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 112.25,
+    "businessName": "AIG רכב חובה",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 6.56,
+    "businessName": "PAYPAL *NY TIMES NYTIM 4029357733    US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 79.01,
+    "businessName": "RESUME-NOW.COM         844-351-7484  PR",
+    "category": "כללי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 20,
+    "businessName": "פלאש- תל מונד-צמרת",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 154,
+    "businessName": "הראל-ביטוח דירה",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 36,
+    "businessName": "מאפיית הנביאים תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 49,
+    "businessName": "מקור השפע חדש",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 233.03,
+    "businessName": "CARREFOUR תל מונד יציל",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 83,
+    "businessName": "קליית יבגי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 409.5,
+    "businessName": "בישולים בשרון",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 97,
+    "businessName": "ביסקוטי תל מונד",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 65,
+    "businessName": "אי. פי. אי חניה ובקרה בע\"מ",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 121,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 216,
+    "businessName": "מ.תחבורה - פנגו מוביט",
+    "category": "תחבורה ציבורית",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 55,
+    "businessName": "GETT",
+    "category": "תחבורה ציבורית",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-26",
+    "amount": 15,
+    "businessName": "UV AJED",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-27",
+    "amount": 154.73,
+    "businessName": "AMAZON MKTPL*053C95RT3 Amzn.com/bill US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-27",
+    "amount": 3.9,
+    "businessName": "PAYPAL *APPLE.COM/BILL 35314369001   GB",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-27",
+    "amount": 66,
+    "businessName": "פנגו חשבונית חודשית",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-27",
+    "amount": 4.9,
+    "businessName": "פנגו חשבונית חודשית",
+    "category": "רכב",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-27",
+    "amount": 45.6,
+    "businessName": "פנגו חשבונית חודשית",
+    "category": "רכב",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-27",
+    "amount": 161.06,
+    "businessName": "PAYPAL *SHADOWTRADE    4029357733    US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 226.43,
+    "businessName": "ביטוח ישיר ביטוח רכב",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 109.9,
+    "businessName": "עיתון מקור ראשון שותפות מ",
+    "category": "כללי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 186.78,
+    "businessName": "AIG תאונות ובריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 948.67,
+    "businessName": "AIG ביטוח חיים / בריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 93.63,
+    "businessName": "AIG ביטוח חיים / בריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 30.12,
+    "businessName": "AIG ביטוח חיים / בריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 220.83,
+    "businessName": "AMAZON MKTPL*OH27N7TW3 Amzn.com/bill US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 60,
+    "businessName": "עיצוב שיער אייל",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 16.49,
+    "businessName": "ENTREPRENEUR MEDIA INC ENTREPRENEUR. US",
+    "category": "כלכלה",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 13,
+    "businessName": "סופר גוניור 24 בע\"מ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 10,
+    "businessName": "סופר גוניור 24 בע\"מ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 122.91,
+    "businessName": "קליית יבגי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 4.98,
+    "businessName": "פנגו- כבישי אגרה",
+    "category": "רכב",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 40,
+    "businessName": "קליק פון  בע\"מ",
+    "category": "תקשורת",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 555,
+    "businessName": "PAYBOX                 tel aviv      IL",
+    "category": "העברות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-28",
+    "amount": 214,
+    "businessName": "סאג- ' אלפי כלים בע\"מ",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-29",
+    "amount": 122.9,
+    "businessName": "הפניקס חיים ובריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-29",
+    "amount": 73.36,
+    "businessName": "הפניקס חיים ובריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-29",
+    "amount": 206.25,
+    "businessName": "AMAZON MKTPL*LJ4AL0W43 Amzn.com/bill US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-29",
+    "amount": 53,
+    "businessName": "בר כל טוב גילה",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-29",
+    "amount": 59,
+    "businessName": "- 1 שפע בריא-בר  בע\"מ",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-29",
+    "amount": 36,
+    "businessName": "האגודה למלחמה בסרטן",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-29",
+    "amount": 150,
+    "businessName": "אופנת רנואר",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-29",
+    "amount": 89,
+    "businessName": "WOLT",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-29",
+    "amount": 9,
+    "businessName": "אלי פחימה קופי סטופ",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-29",
+    "amount": 131,
+    "businessName": "GO OUT כרטיסים",
+    "category": "פנאי",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-29",
+    "amount": 18,
+    "businessName": "BIT",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-29",
+    "amount": 119,
+    "businessName": "קרביץ ישראל",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-29",
+    "amount": 6.52,
+    "businessName": "VERCEL DOMAINS         VERCEL.COM    US",
+    "category": "כללי",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 472.98,
+    "businessName": "אלקטרה פאוור",
+    "category": "חשמל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 369.31,
+    "businessName": "איי אי ג'י-ביטוח רכב",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 93.28,
+    "businessName": "איי אי גי ביטוח דירה",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 218,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 7,
+    "businessName": "מינימרקט גילה כהן יעקב",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 43,
+    "businessName": "ויקטורי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 51,
+    "businessName": "ואני קפה תרבות וספורט בע\"",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 21,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 9202.95,
+    "businessName": "מסיטיבנק ס.-י",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 21,
+    "businessName": "רגע מתוק",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 16.88,
+    "businessName": "aliexpress",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 159,
+    "businessName": "קרביץ",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 117.99,
+    "businessName": "KAHOOT! ASA            OSLO          NO",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 20,
+    "businessName": "דמי כרטיס",
+    "category": "עמלות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 19.89,
+    "businessName": "דמי כרטיס",
+    "category": "עמלות",
+    "source": "leumicard",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 95,
+    "businessName": "שווארמה  זהר",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 20,
+    "businessName": "חניון גירון רעננה",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 50.41,
+    "businessName": "רבית זכות",
+    "category": "כללי",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 10000,
+    "businessName": "העברה עצמית700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 70,
+    "businessName": "שיניים רעננה",
+    "category": "בריאות",
+    "source": "cal",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 7.56,
+    "businessName": "מס הכנסה",
+    "category": "מס הכנסה",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 12,
+    "businessName": "עמ.הקצאת אשראי",
+    "category": "הלוואה",
+    "source": "leumiBank",
+    "isIncome": false
+  },
+  {
+    "date": "2026-03-01",
+    "amount": 184.31,
+    "businessName": "AMAZON MKTPL*B905O8GR0 Amzn.com/bill US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-02-25",
+    "amount": 30841.2,
+    "businessName": "העברת משכורת",
+    "category": "משכורת",
+    "source": "leumiBank",
+    "isIncome": true,
+    "isTemp": false
+  },
+  {
+    "date": "2026-02-27",
+    "amount": 12647.28,
+    "businessName": "העברת משכורת",
+    "category": "משכורת",
+    "source": "leumiBank",
+    "isIncome": true,
+    "isTemp": false
+  },
+  {
+    "date": "2026-02-28",
+    "amount": 3.99,
+    "businessName": "פטור והנחה מדמי כרטיס",
+    "category": "עמלות",
+    "source": "leumicard",
+    "isIncome": true,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-01",
+    "amount": 87.32,
+    "businessName": "חשבונית ירוקה",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-01",
+    "amount": 22.31,
+    "businessName": "עמל.ערוץ יש 23",
+    "category": "עמלות",
+    "source": "leumiBank",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-01",
+    "amount": 24.75,
+    "businessName": "עמל.ערוץ יש 15",
+    "category": "עמלות",
+    "source": "leumiBank",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-02",
+    "amount": 217,
+    "businessName": "הדס פתרונות סינון בע\"מ",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-06",
+    "amount": 482.92,
+    "businessName": "טרקלין חשמ - רלקו-גמא",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 1500,
+    "businessName": "תדיראן מוצרי צריכה",
+    "category": "תשלומים",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 1333.34,
+    "businessName": "מוסך  פרומוטורס בעמ-גמא",
+    "category": "תשלומים",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-19",
+    "amount": 224,
+    "businessName": "סודהסטרים ישראל בע\"מ",
+    "category": "תשלומים",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-26",
+    "amount": 112.25,
+    "businessName": "AIG רכב חובה",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-02",
+    "amount": 284.74,
+    "businessName": "קרן מכבי",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 60,
+    "businessName": "עיצוב שיער אייל",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-04",
+    "amount": 120.23,
+    "businessName": "HEROKU* FEB-110834505  WWW.HEROKU.CO US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 242.59,
+    "businessName": "מכבי-י",
+    "category": "ביטוח",
+    "source": "leumiBank",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 25.9,
+    "businessName": "PAYPAL *APPLE.COM/BILL 35314369001   GB",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 232.58,
+    "businessName": "הראל-ביטוח בריאות",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 23.9,
+    "businessName": "Google YouTube         650-2530000   US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 16.05,
+    "businessName": "PAYPAL *YAHOO MAIL PLU 4029357733    US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-12",
+    "amount": 69.9,
+    "businessName": "Netflix.com            Los Gatos     NL",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-12",
+    "amount": 12.9,
+    "businessName": "דמי כרטיס",
+    "category": "עמלות",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-12",
+    "amount": 17.9,
+    "businessName": "דמי כרטיס",
+    "category": "עמלות",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-12",
+    "amount": 41.42,
+    "businessName": "Amazon Digit*BD2LZ7BE2 888-802-3080  US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-14",
+    "amount": 8,
+    "businessName": "Google One               650-2530000  US",
+    "category": "דיגיטל",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": true
+  },
+  {
+    "date": "2026-03-02",
+    "amount": 103.75,
+    "businessName": "ישיר ביטוח חובה",
+    "category": "ביטוח",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-02",
+    "amount": 6029.9,
+    "businessName": "מוסך  פרומוטורס בעמ-גמא",
+    "category": "תשלומים",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-16",
+    "amount": 1309.8,
+    "businessName": "רמי לוי -  נתניה",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-19",
+    "amount": 781.57,
+    "businessName": "שופרסל און ליין",
+    "category": "תשלומים",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 124.9,
+    "businessName": "לוטו שלי",
+    "category": "פנאי",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 61.9,
+    "businessName": "לוטו שלי",
+    "category": "פנאי",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-09",
+    "amount": 1589.65,
+    "businessName": "בבית-עמותה ל-י",
+    "category": "כללי",
+    "source": "leumiBank",
+    "isIncome": true,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-01",
+    "amount": 64,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-02",
+    "amount": 56,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-02",
+    "amount": 31.8,
+    "businessName": "carrefour תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-03",
+    "amount": 85,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-03",
+    "amount": 290,
+    "businessName": "נירו הדייג- מיארא דגי ים",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-04",
+    "amount": 117,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 33,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 11,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-01",
+    "amount": 218.4,
+    "businessName": "הקוסקוס של גליה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-06",
+    "amount": 286,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-06",
+    "amount": 62,
+    "businessName": "אלונית תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-06",
+    "amount": 39,
+    "businessName": "קליית יבגי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-06",
+    "amount": 539.6,
+    "businessName": "בישולים בשרון",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-06",
+    "amount": 46,
+    "businessName": "מאפיית הנביאים תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 107.19,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 22.4,
+    "businessName": "carrefour תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 85,
+    "businessName": "שופרסל דיל צומת",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 127,
+    "businessName": "שופרסל שלי תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 9,
+    "businessName": "הקוסקוס של גליה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 304,
+    "businessName": "הקוסקוס של גליה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-12",
+    "amount": 31,
+    "businessName": "ממתקים ברכבת",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-13",
+    "amount": 287.5,
+    "businessName": "carrefour תל מונד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": true
+  },
+  {
+    "date": "2026-03-13",
+    "amount": 37.9,
+    "businessName": "קליית יבגי",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": true
+  },
+  {
+    "date": "2026-03-13",
+    "amount": 36,
+    "businessName": "טאבון דוד",
+    "category": "כלכלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": true
+  },
+  {
+    "date": "2026-03-13",
+    "amount": 574,
+    "businessName": "בישולים בשרון",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": true
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 6,
+    "businessName": "העברה ב BIT בנה\"פ",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 50,
+    "businessName": "מבשר ציון ער",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 20,
+    "businessName": "זק\"א",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-09",
+    "amount": 20,
+    "businessName": "מזון לחיים (ע\"ר)",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 2.06,
+    "businessName": "עיגול להושיט יד",
+    "category": "תרומה",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 18,
+    "businessName": "זק\"א",
+    "category": "תרומה",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 36,
+    "businessName": "קו לחיים",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 230,
+    "businessName": "מבשר ציון ער",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 22,
+    "businessName": "יד שרה הו\"ק השאלות",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 40,
+    "businessName": "טופ טן",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 111,
+    "businessName": "פול עיר ימים",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 167,
+    "businessName": "סטרדיווריוס עיר ימים",
+    "category": "ביגוד והנעלה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-03",
+    "amount": 359.2,
+    "businessName": "NOVAKIDSCHOOL          NOVAKIDSCHOOL US",
+    "category": "חינוך",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 370,
+    "businessName": "(תנועת בני עקיבא בישראל )",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 36,
+    "businessName": "(תנועת בני עקיבא בישראל )",
+    "category": "תרומה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 1460,
+    "businessName": "קבוצת רעות (-י",
+    "category": "תרומה",
+    "source": "leumiBank",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-01",
+    "amount": 80,
+    "businessName": "דודא לפיצה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-02",
+    "amount": 153,
+    "businessName": "ביסקוטי תל מונד בע\"מ",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-02",
+    "amount": 84,
+    "businessName": "ביסקוטי תל מונד בע\"מ",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-04",
+    "amount": 20,
+    "businessName": "הולי בייגל- קייטרינג/אירו",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-04",
+    "amount": 57,
+    "businessName": "פסטריה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 36,
+    "businessName": "אירוח והסעדה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 91,
+    "businessName": "פיצה סנטרל",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 22,
+    "businessName": "מיסטר קורן עיר ימים",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-06",
+    "amount": 147,
+    "businessName": "ביסקוטי תל מונד",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-07",
+    "amount": 30,
+    "businessName": "אואזיס קדימה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 47,
+    "businessName": "אירוח והסעדה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-09",
+    "amount": 100,
+    "businessName": "תסביך פלאפל",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 100,
+    "businessName": "תסביך פלאפל",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-12",
+    "amount": 215,
+    "businessName": "קפה גרג רננים",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-12",
+    "amount": 132,
+    "businessName": "אירוח והסעדה",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-13",
+    "amount": 100,
+    "businessName": "ביסקוטי תל מונד",
+    "category": "אוכל בחוץ",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": true
+  },
+  {
+    "date": "2026-03-02",
+    "amount": 1590,
+    "businessName": "משרד התחבורה - רשיונות רכ",
+    "category": "רכב",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 322,
+    "businessName": "דור אלון תל מונד",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 1403,
+    "businessName": "משרד התחבורה - רשיונות רכ",
+    "category": "רכב",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 30,
+    "businessName": "מרכז שירות עד רעננה בע\"מ",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 50,
+    "businessName": "כהן טוביה חשמל רכב",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 3,
+    "businessName": "חניון מ. אביב ועד לאומי 1 ירושלים",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-12",
+    "amount": 121.93,
+    "businessName": "מפעלי דינמומטר",
+    "category": "רכב",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-04",
+    "amount": 96,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 239,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 186,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "פארמה",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-09",
+    "amount": 10595,
+    "businessName": "העברה דיגי700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 230,
+    "businessName": "העברה עצמית700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": true,
+    "isTemp": false
+  },
+  {
+    "date": "2026-01-10",
+    "amount": 7.63,
+    "businessName": "פרעון        +30 אר",
+    "category": "עמלות",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-02",
+    "amount": 226.54,
+    "businessName": "כרטיסי אשראי-י",
+    "category": "סליקת אשראי",
+    "source": "leumiBank",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-04",
+    "amount": 100,
+    "businessName": "BIT",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-05",
+    "amount": 3009,
+    "businessName": "קול את וקסמן שירותי מס בע",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 50,
+    "businessName": "BIT",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 59.9,
+    "businessName": "לוטו שלי",
+    "category": "פנאי",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 54.9,
+    "businessName": "לוטו שלי",
+    "category": "פנאי",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-08",
+    "amount": 169.9,
+    "businessName": "לוטו שלי",
+    "category": "פנאי",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-09",
+    "amount": 44.09,
+    "businessName": "Kindle Svcs*BE99327N0  888-802-3080  US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-09",
+    "amount": 26,
+    "businessName": "רגע מתוק",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-09",
+    "amount": 59.9,
+    "businessName": "לוטו שלי",
+    "category": "פנאי",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-09",
+    "amount": 318,
+    "businessName": "BIT",
+    "category": "העברות",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 12,
+    "businessName": "הנשיאה",
+    "category": "כללי",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-10",
+    "amount": 1590,
+    "businessName": "העברה עצמית700",
+    "category": "העברות",
+    "source": "leumiBank",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 34.15,
+    "businessName": "Kindle Svcs*BP92S4B91  888-802-3080  US",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 59.9,
+    "businessName": "לוטו שלי",
+    "category": "פנאי",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 32.9,
+    "businessName": "לוטו שלי",
+    "category": "פנאי",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 89.9,
+    "businessName": "לוטו שלי",
+    "category": "פנאי",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 160,
+    "businessName": "ארץ קיר מפות בע''מ",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 173,
+    "businessName": "תל מונד STOCK B",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 47.69,
+    "businessName": "PAYPAL *CANVAPTYLIM    4029357733    AU",
+    "category": "דיגיטל",
+    "source": "leumicard",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-12",
+    "amount": 59,
+    "businessName": "מובי סייל רננים-צמרת",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": false
+  },
+  {
+    "date": "2026-03-13",
+    "amount": 137.9,
+    "businessName": "סאג- ' אלפי כלים בע\"מ",
+    "category": "קניות",
+    "source": "cal",
+    "isIncome": false,
+    "isTemp": true
   }
 ]

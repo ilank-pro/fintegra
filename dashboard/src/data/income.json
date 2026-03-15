@@ -70,5 +70,239 @@
     "amount": 2000,
     "businessName": "העברה עצמית700",
     "category": "העברות"
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 19369.95,
+    "businessName": "העברת משכורת",
+    "category": "משכורת"
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 3.99,
+    "businessName": "פטור והנחה מדמי כרטיס",
+    "category": "עמלות"
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 26715.84,
+    "businessName": "העברת משכורת",
+    "category": "משכורת"
+  },
+  {
+    "date": "2026-01-05",
+    "amount": 250,
+    "businessName": "הפועלים-ביט",
+    "category": "העברות"
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 250,
+    "businessName": "העברה דיגי700",
+    "category": "העברות"
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 1500,
+    "businessName": "העברה דיגי700",
+    "category": "העברות"
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 1850,
+    "businessName": "העברה עצמית700",
+    "category": "העברות"
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 56.64,
+    "businessName": "זיכוי עמ.הישיר",
+    "category": "העברות"
+  },
+  {
+    "date": "2026-01-06",
+    "amount": 250,
+    "businessName": "העברה עצמית700",
+    "category": "העברות"
+  },
+  {
+    "date": "2026-01-14",
+    "amount": 270,
+    "businessName": "העברה עצמית700",
+    "category": "העברות"
+  },
+  {
+    "date": "2026-01-15",
+    "amount": 300,
+    "businessName": "העברה עצמית700",
+    "category": "העברות"
+  },
+  {
+    "date": "2026-01-19",
+    "amount": 4200,
+    "businessName": "בנק אוצר החיל",
+    "category": "העברות"
+  },
+  {
+    "date": "2026-01-20",
+    "amount": 276,
+    "businessName": "קצבת ילדים-י",
+    "category": "קצבאות"
+  },
+  {
+    "date": "2026-01-25",
+    "amount": 470,
+    "businessName": "העברה עצמית700",
+    "category": "העברות"
+  },
+  {
+    "date": "2026-01-27",
+    "amount": 290,
+    "businessName": "העברה עצמית700",
+    "category": "העברות"
+  },
+  {
+    "date": "2026-01-30",
+    "amount": 40,
+    "businessName": "סופר פארם  תל מונד",
+    "category": "זיכויים"
+  },
+  {
+    "date": "2025-11-26",
+    "amount": 19369.95,
+    "businessName": "העברת משכורת",
+    "category": "משכורת"
+  },
+  {
+    "date": "2025-11-30",
+    "amount": 3.99,
+    "businessName": "פטור והנחה מדמי כרטיס",
+    "category": "עמלות"
+  },
+  {
+    "date": "2025-11-30",
+    "amount": 26651.85,
+    "businessName": "העברת משכורת",
+    "category": "משכורת"
+  },
+  {
+    "date": "2025-12-08",
+    "amount": 510,
+    "businessName": "הפועלים-ביט",
+    "category": "העברות"
+  },
+  {
+    "date": "2025-12-11",
+    "amount": 280,
+    "businessName": "העברה עצמית700",
+    "category": "העברות"
+  },
+  {
+    "date": "2025-12-14",
+    "amount": 3400,
+    "businessName": "הפועלים-ביט",
+    "category": "העברות"
+  },
+  {
+    "date": "2025-12-17",
+    "amount": 4200,
+    "businessName": "בנק אוצר החיל",
+    "category": "העברות"
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 269,
+    "businessName": "קצבת ילדים-י",
+    "category": "קצבאות"
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 22.46,
+    "businessName": "החזר פריים",
+    "category": "הלוואה"
+  },
+  {
+    "date": "2025-12-21",
+    "amount": 250,
+    "businessName": "העברה עצמית700",
+    "category": "העברות"
+  },
+  {
+    "date": "2025-12-23",
+    "amount": 1250,
+    "businessName": "בנק מזרחי",
+    "category": "הלוואה"
+  },
+  {
+    "date": "2025-12-23",
+    "amount": 1250,
+    "businessName": "בנק הפועלים",
+    "category": "העברות"
+  },
+  {
+    "date": "2025-12-24",
+    "amount": 1250,
+    "businessName": "העברה דיגי700",
+    "category": "העברות"
+  },
+  {
+    "date": "2025-12-24",
+    "amount": 1250,
+    "businessName": "בנק מזרחי",
+    "category": "הלוואה"
+  },
+  {
+    "date": "2025-12-30",
+    "amount": 9202.95,
+    "businessName": "מסיטיבנק ס.-י",
+    "category": "העברות"
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 50.41,
+    "businessName": "רבית זכות",
+    "category": "כללי"
+  },
+  {
+    "date": "2025-12-31",
+    "amount": 10000,
+    "businessName": "העברה עצמית700",
+    "category": "העברות"
+  },
+  {
+    "date": "2026-02-25",
+    "amount": 30841.2,
+    "businessName": "העברת משכורת",
+    "category": "משכורת"
+  },
+  {
+    "date": "2026-02-27",
+    "amount": 12647.28,
+    "businessName": "העברת משכורת",
+    "category": "משכורת"
+  },
+  {
+    "date": "2026-02-28",
+    "amount": 3.99,
+    "businessName": "פטור והנחה מדמי כרטיס",
+    "category": "עמלות"
+  },
+  {
+    "date": "2026-03-09",
+    "amount": 1589.65,
+    "businessName": "בבית-עמותה ל-י",
+    "category": "כללי"
+  },
+  {
+    "date": "2026-03-09",
+    "amount": 10595,
+    "businessName": "העברה דיגי700",
+    "category": "העברות"
+  },
+  {
+    "date": "2026-03-11",
+    "amount": 230,
+    "businessName": "העברה עצמית700",
+    "category": "העברות"
   }
 ]

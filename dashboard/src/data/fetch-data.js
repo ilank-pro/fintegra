@@ -6,10 +6,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Ensure we are using the portable node and the correct CLI path
 const PROJECT_ROOT = join(__dirname, '..', '..', '..');
 const CLI_PATH = join(PROJECT_ROOT, 'riseup-cli-main', 'dist', 'cli.js');
-const NODE_BIN = join(PROJECT_ROOT, 'riseup-cli-main', 'node-v22.14.0-darwin-arm64', 'bin', 'node');
 const DATA_DIR = join(__dirname);
 
 // Commands to fetch data for
@@ -31,9 +29,8 @@ for (const cmd of commands) {
     try {
         console.log(`Fetching ${cmd}...`);
         // Execute the CLI command with the --json flag
-        const result = execSync(`"${NODE_BIN}" "${CLI_PATH}" ${cmd} --json`, {
+        const result = execSync(`node "${CLI_PATH}" ${cmd} --json`, {
             encoding: 'utf-8',
-            env: { ...process.env, PATH: `${dirname(NODE_BIN)}:${process.env.PATH}` }
         });
 
         // Save the raw JSON output to a file

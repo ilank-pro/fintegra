@@ -74,16 +74,22 @@ function App() {
     const [refreshing, setRefreshing] = useState(false);
     const [refreshMsg, setRefreshMsg] = useState<string | null>(null);
 
-    const toggleMonth = useCallback((m: string) => {
-        setSelectedMonths(prev => {
-            const next = new Set(prev);
-            if (next.has(m)) {
-                if (next.size > 1) next.delete(m);
-            } else {
-                next.add(m);
-            }
-            return next;
-        });
+    const toggleMonth = useCallback((m: string, e: React.MouseEvent) => {
+        if (e.metaKey || e.ctrlKey) {
+            // Cmd/Ctrl+Click: toggle this month while keeping others
+            setSelectedMonths(prev => {
+                const next = new Set(prev);
+                if (next.has(m)) {
+                    if (next.size > 1) next.delete(m);
+                } else {
+                    next.add(m);
+                }
+                return next;
+            });
+        } else {
+            // Plain click: select only this month
+            setSelectedMonths(new Set([m]));
+        }
     }, []);
 
     const selectAll = useCallback(() => setSelectedMonths(new Set(availableMonths.map(d => d.month))), [availableMonths]);
@@ -98,11 +104,12 @@ function App() {
             const res = await fetch('/api/refresh-data');
             const data = await res.json();
             if (data.ok) {
-                setRefreshMsg('Data updated — reloading...');
+                setRefreshMsg(data.errors?.length ? `Updated (${data.errors.length} warnings) — reloading...` : 'Data updated — reloading...');
                 setTimeout(() => window.location.reload(), 800);
             } else {
-                setRefreshMsg('Refresh failed — check login session');
-                setTimeout(() => setRefreshMsg(null), 4000);
+                const errMsg = data.error?.includes('CLI not built') ? 'CLI not built — run setup first' : 'Refresh failed — check login session';
+                setRefreshMsg(errMsg);
+                setTimeout(() => setRefreshMsg(null), 5000);
             }
         } catch {
             setRefreshMsg('Refresh failed — server unreachable');
@@ -184,24 +191,25 @@ function App() {
 
                 {/* Global Month Selector */}
                 <div className="glass-panel animate-fade-in" style={{
-                    padding: '12px 20px', marginBottom: '16px',
-                    display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap',
+                    padding: '8px 16px', marginBottom: '12px',
+                    display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0,
                 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-secondary)', flexShrink: 0 }}>
-                        <CalendarDays size={16} />
-                        <span style={{ fontSize: '13px', fontWeight: 600 }}>Period</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--text-secondary)', flexShrink: 0 }}>
+                        <CalendarDays size={14} />
+                        <span style={{ fontSize: '12px', fontWeight: 600 }}>Period</span>
                     </div>
 
-                    <div style={{ display: 'flex', gap: '5px', flexWrap: 'wrap', flex: 1 }}>
+                    <div style={{ display: 'flex', gap: '4px', flex: 1, overflowX: 'auto', flexShrink: 1, minWidth: 0 }}>
                         {availableMonths.map(d => {
                             const isSelected = selectedMonths.has(d.month);
                             return (
                                 <button
                                     key={d.month}
-                                    onClick={() => toggleMonth(d.month)}
+                                    onClick={(e) => toggleMonth(d.month, e)}
                                     style={{
-                                        padding: '4px 12px', borderRadius: '8px', fontSize: '12px', fontWeight: 600,
+                                        padding: '3px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: 600,
                                         cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.2s',
+                                        whiteSpace: 'nowrap', flexShrink: 0,
                                         border: isSelected ? '1px solid var(--accent-primary)' : '1px solid var(--border-light)',
                                         background: isSelected ? 'rgba(0,240,255,0.12)' : 'rgba(255,255,255,0.03)',
                                         color: isSelected ? 'var(--accent-primary)' : 'var(--text-muted)',
