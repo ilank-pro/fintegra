@@ -1,12 +1,13 @@
 import { useState, useMemo, useCallback, useEffect } from 'react';
 import './index.css';
-import { LayoutDashboard, Wallet, ArrowRightLeft, Lightbulb, BarChart2, PieChart, SlidersHorizontal, CalendarDays, RefreshCw, Sun, Moon } from 'lucide-react';
+import { LayoutDashboard, Wallet, ArrowRightLeft, Lightbulb, BarChart2, PieChart, SlidersHorizontal, CalendarDays, RefreshCw, Sun, Moon, BriefcaseBusiness } from 'lucide-react';
 import Overview from './components/Overview';
 import CashFlow from './components/CashFlow';
 import Transactions from './components/Transactions';
 import Insights from './components/Insights';
 import SpendingBreakdown from './components/SpendingBreakdown';
 import Simulations from './components/Simulations';
+import Advisor from './components/Advisor';
 import trendsData from './data/trends.json';
 import transactionsData from './data/transactions.json';
 import spendingData from './data/spending.json';
@@ -140,6 +141,7 @@ function App() {
             case 'transactions': return <Transactions selectedMonths={selectedMonths} drillCategory={drillCategory} onDrillClear={() => setDrillCategory(null)} />;
             case 'insights': return <Insights selectedMonths={selectedMonths} />;
             case 'simulations': return <Simulations selectedMonths={selectedMonths} />;
+            case 'advisor': return <Advisor />;
             default: return <Overview selectedMonths={selectedMonths} availableMonths={availableMonths} />;
         }
     };
@@ -151,6 +153,7 @@ function App() {
         transactions: 'Recent Transactions',
         insights: 'Insights & Progress',
         simulations: 'Simulations',
+        advisor: 'Financial Advisor',
     };
 
     return (
@@ -172,6 +175,7 @@ function App() {
                         { id: 'transactions', icon: <ArrowRightLeft size={20} />, label: 'Transactions' },
                         { id: 'insights', icon: <Lightbulb size={20} />, label: 'Insights' },
                         { id: 'simulations', icon: <SlidersHorizontal size={20} />, label: 'Simulations' },
+                        { id: 'advisor', icon: <BriefcaseBusiness size={20} />, label: 'Advisor' },
                     ].map(({ id, icon, label }) => (
                         <button
                             key={id}

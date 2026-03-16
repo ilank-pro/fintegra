@@ -281,7 +281,103 @@ function refreshDataPlugin() {
   }
 }
 
+function advisorPlugin() {
+  return {
+    name: 'advisor-api',
+    configureServer(server) {
+      server.middlewares.use('/api/advisor', (req, res) => {
+        if (req.method !== 'POST') {
+          res.writeHead(405, { 'Content-Type': 'application/json' })
+          res.end(JSON.stringify({ ok: false, error: 'POST only' }))
+          return
+        }
+
+        let body = ''
+        req.on('data', (chunk: Buffer) => { body += chunk.toString() })
+        req.on('end', async () => {
+          try {
+            const { apiKey, findings, dataSummary } = JSON.parse(body)
+
+            if (!apiKey) {
+              res.writeHead(400, { 'Content-Type': 'application/json' })
+              res.end(JSON.stringify({ ok: false, error: 'API key required' }))
+              return
+            }
+
+            const systemPrompt = `You are a professional Israeli financial advisor. Analyze the client's financial data and return a structured JSON report. Be direct, use specific numbers (ILS ₪), and provide actionable recommendations.
+
+IMPORTANT: Return ONLY valid JSON, no markdown, no explanation outside the JSON. Use this exact schema:
+
+{
+  "executiveSummary": "2-3 sentence overview of financial health, mentioning key strengths and concerns",
+  "overallRisk": "low" | "medium" | "high" | "critical",
+  "keyMetrics": [
+    { "label": "short name", "value": number, "format": "currency" | "percent" | "months", "trend": "up" | "down" | "stable", "insight": "one sentence explanation" }
+  ],
+  "topFindings": [
+    { "title": "short title", "severity": "critical" | "warning" | "good", "detail": "what we found with specific numbers", "action": "specific actionable recommendation" }
+  ],
+  "improvementPlan": [
+    { "step": 1, "title": "action title", "description": "detailed how-to with numbers", "impact": "high" | "medium" | "low", "timeframe": "e.g. 1 month", "targetSaving": number_in_ILS }
+  ],
+  "categoryTargets": [
+    { "category": "English category name", "current": number, "target": number, "strategy": "how to achieve the target" }
+  ],
+  "riskMatrix": [
+    { "risk": "risk name", "level": "high" | "medium" | "low", "mitigation": "how to address it" }
+  ],
+  "monthlyChecklist": ["actionable item 1", "actionable item 2", ...],
+  "longTermOutlook": "1-2 paragraph forward-looking narrative about their financial trajectory and what achieving the plan would mean"
+}
+
+Include 3-4 keyMetrics, 4-5 topFindings, exactly 5 improvementPlan steps, 4-6 categoryTargets, 3-5 riskMatrix items, and 5-7 monthlyChecklist items.`
+
+            const userMessage = `Here is the client's financial data and automated findings:
+
+## Automated Findings
+${findings.map((f: any) => `- [${f.severity.toUpperCase()}] ${f.title}: ${f.finding}`).join('\n')}
+
+## Financial Data Summary
+${JSON.stringify(dataSummary, null, 2)}`
+
+            const response = await fetch('https://api.anthropic.com/v1/messages', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'x-api-key': apiKey,
+                'anthropic-version': '2023-06-01',
+              },
+              body: JSON.stringify({
+                model: 'claude-sonnet-4-20250514',
+                max_tokens: 4000,
+                system: systemPrompt,
+                messages: [{ role: 'user', content: userMessage }],
+              }),
+            })
+
+            if (!response.ok) {
+              const errText = await response.text()
+              res.writeHead(response.status, { 'Content-Type': 'application/json' })
+              res.end(JSON.stringify({ ok: false, error: `API error: ${response.status} ${errText.slice(0, 200)}` }))
+              return
+            }
+
+            const result = await response.json() as any
+            const report = result.content?.[0]?.text || 'No report generated'
+
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify({ ok: true, report }))
+          } catch (err) {
+            res.writeHead(500, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify({ ok: false, error: (err as Error).message }))
+          }
+        })
+      })
+    },
+  }
+}
+
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), refreshDataPlugin()],
+  plugins: [react(), refreshDataPlugin(), advisorPlugin()],
 })
