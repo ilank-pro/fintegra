@@ -308,21 +308,73 @@ function pensionImportPlugin() {
   return {
     name: 'pension-import',
     configureServer(server) {
-      server.middlewares.use('/api/import-pension', (_req, res) => {
-        try {
-          const xlsPath = join(__dirname, '..', '..', 'Downloads', 'התמונה המלאה.xls')
-          const fs = require('fs')
-          if (!fs.existsSync(xlsPath)) {
-            res.writeHead(404, { 'Content-Type': 'application/json' })
-            res.end(JSON.stringify({ ok: false, error: 'XLS file not found at ' + xlsPath }))
-            return
-          }
+      server.middlewares.use('/api/import-pension', (req, res) => {
+        if (req.method !== 'POST') {
+          res.writeHead(405, { 'Content-Type': 'application/json' })
+          res.end(JSON.stringify({ ok: false, error: 'POST with file upload required' }))
+          return
+        }
+
+        // Collect uploaded file data
+        const chunks: Buffer[] = []
+        req.on('data', (chunk: Buffer) => chunks.push(chunk))
+        req.on('end', () => {
+          try {
+            const fs = require('fs')
+            const os = require('os')
+            const body = Buffer.concat(chunks)
+
+            // Extract file from multipart form data
+            const boundary = req.headers['content-type']?.split('boundary=')[1]
+            if (!boundary) {
+              res.writeHead(400, { 'Content-Type': 'application/json' })
+              res.end(JSON.stringify({ ok: false, error: 'No file boundary found' }))
+              return
+            }
+
+            // Find file content between boundaries
+            const bodyStr = body.toString('latin1')
+            const parts = bodyStr.split('--' + boundary)
+            let fileContent: Buffer | null = null
+            for (const part of parts) {
+              if (part.includes('filename=')) {
+                const headerEnd = part.indexOf('\r\n\r\n')
+                if (headerEnd >= 0) {
+                  const dataStr = part.substring(headerEnd + 4)
+                  // Remove trailing \r\n
+                  const trimmed = dataStr.endsWith('\r\n') ? dataStr.slice(0, -2) : dataStr
+                  fileContent = Buffer.from(trimmed, 'latin1')
+                }
+              }
+            }
+
+            if (!fileContent) {
+              res.writeHead(400, { 'Content-Type': 'application/json' })
+              res.end(JSON.stringify({ ok: false, error: 'No file found in upload' }))
+              return
+            }
+
+            // Save to temp file
+            const tmpPath = join(os.tmpdir(), 'pension-import-' + Date.now() + '.xls')
+            fs.writeFileSync(tmpPath, fileContent)
+
           // Use python to parse XLS (xlrd already installed)
+          const xlsPath = tmpPath
           const result = execSync(`/Applications/Xcode.app/Contents/Developer/usr/bin/python3 << 'PYEOF'
 import xlrd, json
 wb = xlrd.open_workbook("${xlsPath}")
 sheet = wb.sheet_by_name("פרטי המוצרים שלי")
 deps_sheet = wb.sheet_by_name("מעקב הפקדות")
+
+# Build actual monthly deposits from deposit tracking sheet (latest entry per policy)
+active_deposits = {}
+for r in range(1, deps_sheet.nrows):
+    policy = str(deps_sheet.cell_value(r, 2))
+    emp = deps_sheet.cell_value(r, 6) or 0
+    empr = deps_sheet.cell_value(r, 7) or 0
+    pitz = deps_sheet.cell_value(r, 8) or 0
+    active_deposits[policy] = emp + empr + pitz
+
 accounts = []
 for r in range(1, sheet.nrows):
     name = sheet.cell_value(r, 0)
@@ -334,14 +386,14 @@ for r in range(1, sheet.nrows):
     pension_mo = sheet.cell_value(r, 9) or 0
     mgmt_fee = sheet.cell_value(r, 12) or 0
     ytd_return = sheet.cell_value(r, 13) or 0
-    emp_dep = sheet.cell_value(r, 14) or 0
-    empr_dep = sheet.cell_value(r, 15) or 0
+    # Use deposit tracking sheet for actual monthly deposits (not products sheet)
+    monthly_deposit = active_deposits.get(policy, 0)
     if savings > 0 or expected > 0:
         accounts.append({
             "name": name, "company": company, "policy": policy,
             "status": "active" if status == "פעיל" else "inactive",
             "currentBalance": savings, "annualInterest": ytd_return,
-            "monthlyDeposit": emp_dep + empr_dep, "monthlyPension": pension_mo,
+            "monthlyDeposit": monthly_deposit, "monthlyPension": pension_mo,
             "managementFee": mgmt_fee,
         })
 # Add Harel pension (not in products sheet with balance)
@@ -352,10 +404,20 @@ if not harel_exists:
         "status": "active", "currentBalance": 1717000, "annualInterest": 4.0,
         "monthlyDeposit": 11033, "monthlyPension": 0, "managementFee": 0.5,
     })
-print(json.dumps(accounts, ensure_ascii=False))
+# Extract data date from first account's date column (col 29)
+data_date = None
+for r in range(1, sheet.nrows):
+    val = sheet.cell_value(r, 29)
+    if val:
+        data_date = val
+        break
+print(json.dumps({"accounts": accounts, "dataDate": data_date}, ensure_ascii=False))
 PYEOF`, { encoding: 'utf-8', timeout: 10000 })
 
-          const accounts = JSON.parse(result)
+          const parsed = JSON.parse(result)
+          const accounts = parsed.accounts || parsed
+          const dataDate = parsed.dataDate || new Date().toISOString().slice(0, 10)
+
           // Add IDs and English names
           const withIds = accounts.map((a: any, i: number) => ({
             id: a.policy.replace(/[^a-zA-Z0-9]/g, '-') + '-' + i,
@@ -365,15 +427,36 @@ PYEOF`, { encoding: 'utf-8', timeout: 10000 })
             depositStopAge: 63,
           }))
 
-          const outPath = join(__dirname, 'src', 'data', 'pension-accounts.json')
+          const dataDir2 = join(__dirname, 'src', 'data')
+          const outPath = join(dataDir2, 'pension-accounts.json')
           fs.writeFileSync(outPath, JSON.stringify(withIds, null, 2))
 
+          // Save history entry (keyed by date — overwrite same date)
+          const historyPath = join(dataDir2, 'pension-history.json')
+          let history: any[] = []
+          try { history = JSON.parse(fs.readFileSync(historyPath, 'utf-8')) } catch {}
+          const totalSavings = withIds.reduce((s: number, a: any) => s + (a.currentBalance || 0), 0)
+          const entry = {
+            date: dataDate,
+            totalSavings,
+            accounts: withIds.map((a: any) => ({ name: a.nameEn || a.name, balance: a.currentBalance })),
+          }
+          const existingIdx = history.findIndex((h: any) => h.date === dataDate)
+          if (existingIdx >= 0) history[existingIdx] = entry
+          else history.push(entry)
+          history.sort((a: any, b: any) => a.date.localeCompare(b.date))
+          fs.writeFileSync(historyPath, JSON.stringify(history, null, 2))
+
+          // Clean up temp file
+          try { fs.unlinkSync(tmpPath) } catch {}
+
           res.writeHead(200, { 'Content-Type': 'application/json' })
-          res.end(JSON.stringify({ ok: true, accounts: withIds }))
-        } catch (err) {
-          res.writeHead(500, { 'Content-Type': 'application/json' })
-          res.end(JSON.stringify({ ok: false, error: (err as Error).message?.slice(0, 200) }))
-        }
+          res.end(JSON.stringify({ ok: true, accounts: withIds, dataDate, history }))
+          } catch (err) {
+            res.writeHead(500, { 'Content-Type': 'application/json' })
+            res.end(JSON.stringify({ ok: false, error: (err as Error).message?.slice(0, 200) }))
+          }
+        })
       })
     },
   }
