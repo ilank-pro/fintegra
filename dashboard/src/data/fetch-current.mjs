@@ -12,20 +12,25 @@ const client = new RiseUpClient();
 const budget = await client.budget.current();
 const txns = budget.envelopes.flatMap(e => e.actuals);
 
-// Fetch previous budgets to get trackingCategory overrides for older transactions
+// Fetch previous budgets to get trackingCategory overrides and trends for older months
 const categoryOverrideMap = {};
+const budgetTrends = [];
 try {
   // Fetch 4 budgets starting from current month (API returns recent budgets going backward)
   const prevBudgets = await client.budget.get(budget.budgetDate, 4);
   for (const b of prevBudgets) {
-    for (const env of b.envelopes) {
-      for (const t of (env.actuals || [])) {
-        if (t.trackingCategory && t.trackingCategory.name && t.trackingCategory.name !== 'blacklist') {
-          const key = `${t.transactionDate || t.billingDate}_${Math.abs(t.billingAmount || 0)}_${t.businessName}`;
-          categoryOverrideMap[key] = t.trackingCategory.name;
-        }
+    const allTxns = b.envelopes.flatMap(e => e.actuals || []);
+    // Category overrides
+    for (const t of allTxns) {
+      if (t.trackingCategory && t.trackingCategory.name && t.trackingCategory.name !== 'blacklist') {
+        const key = `${t.transactionDate || t.billingDate}_${Math.abs(t.billingAmount || 0)}_${t.businessName}`;
+        categoryOverrideMap[key] = t.trackingCategory.name;
       }
     }
+    // Budget trends (income/expenses/net per month)
+    const inc = allTxns.filter(t => t.isIncome).reduce((s, t) => s + (t.incomeAmount || t.billingAmount || 0), 0);
+    const exp = allTxns.filter(t => !t.isIncome).reduce((s, t) => s + Math.abs(t.billingAmount || 0), 0);
+    budgetTrends.push({ month: b.budgetDate, income: inc, expenses: exp, net: inc - exp });
   }
 } catch (e) {
   // Ignore errors fetching previous budgets
@@ -318,4 +323,5 @@ console.log(JSON.stringify({
   trajectory,
   healthScore,
   categoryOverrides: categoryOverrideMap,
+  budgetTrends,
 }));

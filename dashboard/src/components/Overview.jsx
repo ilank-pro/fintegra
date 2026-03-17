@@ -6,26 +6,48 @@ import trajectoryData from '../data/trajectory.json';
 import healthScoreData from '../data/health-score.json';
 
 // Hover tooltip component
-function Tooltip({ text, children }) {
+// position: "above" (default) | "below"
+// align: "center" (default) | "left" | "right"
+function Tooltip({ text, children, position = 'above', align = 'center' }) {
     const [show, setShow] = useState(false);
+
+    const posStyle = position === 'below'
+        ? { top: '100%', marginTop: '8px' }
+        : { bottom: '100%', marginBottom: '8px' };
+
+    const alignStyle = align === 'left'
+        ? { left: 0, transform: 'none' }
+        : align === 'right'
+        ? { right: 0, transform: 'none' }
+        : { left: '50%', transform: 'translateX(-50%)' };
+
+    const arrowPos = position === 'below'
+        ? { bottom: '100%', borderBottom: '6px solid rgba(15,23,42,0.95)', borderTop: 'none' }
+        : { top: '100%', borderTop: '6px solid rgba(15,23,42,0.95)', borderBottom: 'none' };
+
+    const arrowAlign = align === 'left'
+        ? { left: '16px', transform: 'none' }
+        : align === 'right'
+        ? { right: '16px', transform: 'none' }
+        : { left: '50%', transform: 'translateX(-50%)' };
+
     return (
         <span style={{ position: 'relative', display: 'inline-flex', alignItems: 'center' }}
             onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
             {children}
             {show && (
                 <div style={{
-                    position: 'absolute', bottom: '100%', left: '50%', transform: 'translateX(-50%)',
-                    marginBottom: '8px', padding: '10px 14px', borderRadius: '10px',
+                    position: 'absolute', ...posStyle, ...alignStyle,
+                    padding: '10px 14px', borderRadius: '10px',
                     background: 'rgba(15,23,42,0.95)', border: '1px solid rgba(255,255,255,0.1)',
                     color: '#e2e8f0', fontSize: '12px', lineHeight: 1.5, whiteSpace: 'normal',
-                    width: '240px', zIndex: 100, boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+                    width: '240px', zIndex: 200, boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
                     pointerEvents: 'none', textAlign: 'left',
                 }}>
                     {text}
                     <div style={{
-                        position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)',
+                        position: 'absolute', ...arrowPos, ...arrowAlign,
                         width: 0, height: 0, borderLeft: '6px solid transparent', borderRight: '6px solid transparent',
-                        borderTop: '6px solid rgba(15,23,42,0.95)',
                     }} />
                 </div>
             )}
@@ -221,7 +243,7 @@ export default function Overview({ selectedMonths, availableMonths }) {
                     <div
                         className="glass-panel"
                         style={{
-                            padding: '24px', marginBottom: '24px',
+                            padding: '24px', marginBottom: '24px', overflow: 'visible',
                             opacity: mounted ? 1 : 0,
                             transform: mounted ? 'translateY(0)' : 'translateY(20px)',
                             transition: 'opacity 0.35s ease, transform 0.35s ease',
@@ -230,7 +252,7 @@ export default function Overview({ selectedMonths, availableMonths }) {
                         <div style={{ display: 'flex', gap: '28px', alignItems: 'flex-start' }}>
                             {/* Left: Score ring + level */}
                             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
-                                <Tooltip text="Your overall financial health score (0-100) is a weighted average of 4 dimensions: Cash Flow (30%), Emergency Fund (25%), Budget Adherence (25%), and Savings Growth (20%). Improve any dimension to raise your grade.">
+                                <Tooltip position="below" align="left" text="Your overall financial health score (0-100) is a weighted average of 4 dimensions: Cash Flow (30%), Emergency Fund (25%), Budget Adherence (25%), and Savings Growth (20%). Improve any dimension to raise your grade.">
                                     <div style={{ position: 'relative', cursor: 'help' }}>
                                         <svg width={ringSize} height={ringSize} style={{ transform: 'rotate(-90deg)' }}>
                                             <circle cx={ringSize/2} cy={ringSize/2} r={ringRadius} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth={ringStroke} />
@@ -245,7 +267,7 @@ export default function Overview({ selectedMonths, availableMonths }) {
                                     </div>
                                 </Tooltip>
                                 {/* Level */}
-                                <Tooltip text={`Level ${hs.level}: ${hs.levelTitle}. Your level is based on your composite score. Reach score ${hs.level * 10 + 1} to advance to the next level. Keep improving your weakest dimension!`}>
+                                <Tooltip position="below" align="left" text={`Level ${hs.level}: ${hs.levelTitle}. Your level is based on your composite score. Reach score ${hs.level * 10 + 1} to advance to the next level. Keep improving your weakest dimension!`}>
                                     <div style={{ marginTop: '12px', textAlign: 'center', cursor: 'help' }}>
                                         <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Level {hs.level}</div>
                                         <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--accent-primary)' }}>{hs.levelTitle}</div>
@@ -266,7 +288,7 @@ export default function Overview({ selectedMonths, availableMonths }) {
                                         </Tooltip>
                                     </div>
                                     {hs.streak > 0 && (
-                                        <Tooltip text={`You've had ${hs.streak} consecutive month(s) with positive net cash flow. Keep the streak going! A longer streak means more financial stability.`}>
+                                        <Tooltip position="below" align="right" text={`You've had ${hs.streak} consecutive month(s) with positive net cash flow. Keep the streak going! A longer streak means more financial stability.`}>
                                             <div style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 12px', borderRadius: '12px', background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.2)', cursor: 'help' }}>
                                                 <Flame size={14} color="var(--accent-warning)" />
                                                 <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--accent-warning)' }}>{hs.streak}-month streak</span>
@@ -299,7 +321,7 @@ export default function Overview({ selectedMonths, availableMonths }) {
                             {/* Right: Challenge + badges */}
                             <div style={{ width: '220px', flexShrink: 0 }}>
                                 {/* Active Challenge */}
-                                <Tooltip text={`This challenge targets your weakest area: ${hs.challenge.weakestDim} (score: ${hs.challenge.weakestScore}). Completing it will have the biggest impact on your overall score.`}>
+                                <Tooltip align="right" text={`This challenge targets your weakest area: ${hs.challenge.weakestDim} (score: ${hs.challenge.weakestScore}). Completing it will have the biggest impact on your overall score.`}>
                                     <div style={{ padding: '14px', background: 'rgba(139,92,246,0.06)', borderRadius: '10px', border: '1px solid rgba(139,92,246,0.15)', marginBottom: '12px', cursor: 'help' }}>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '6px' }}>
                                             <Zap size={14} color="var(--accent-purple)" />
@@ -317,7 +339,7 @@ export default function Overview({ selectedMonths, availableMonths }) {
                                     </div>
                                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
                                         {hs.badges.map(b => (
-                                            <Tooltip key={b.id} text={`${b.name}: ${b.desc}${b.earned ? ' (Earned!)' : ' (Not yet earned — keep working toward it!)'}`}>
+                                            <Tooltip key={b.id} align="right" text={`${b.name}: ${b.desc}${b.earned ? ' (Earned!)' : ' (Not yet earned — keep working toward it!)'}`}>
                                                 <span style={{
                                                     fontSize: '18px', cursor: 'help',
                                                     opacity: b.earned ? 1 : 0.2,

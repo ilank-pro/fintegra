@@ -252,11 +252,21 @@ function refreshDataPlugin() {
             addLog(`  Health score: ${current.healthScore.composite}/100 (${current.healthScore.grade}), Level ${current.healthScore.level}`)
           }
 
-          // Add current month to trends if not already present
+          // Merge budget trends into trends.json (fills gaps like missing Feb)
           const existingTrendsPath = join(dataDir, 'trends.json')
           let allTrends: any[] = []
           try { allTrends = JSON.parse(fs.readFileSync(existingTrendsPath, 'utf-8')) } catch {}
           const trendMonths = new Set(allTrends.map((t: any) => t.month))
+          let trendsAdded = 0
+          // Add from budget API (includes current + previous months)
+          for (const bt of (current.budgetTrends || [])) {
+            if (!trendMonths.has(bt.month)) {
+              allTrends.push(bt)
+              trendMonths.add(bt.month)
+              trendsAdded++
+            }
+          }
+          // Also ensure current month is present
           if (!trendMonths.has(current.budgetDate)) {
             allTrends.push({
               month: current.budgetDate,
@@ -264,11 +274,14 @@ function refreshDataPlugin() {
               expenses: current.totalExpenses,
               net: current.totalIncome - current.totalExpenses,
             })
+            trendsAdded++
+          }
+          if (trendsAdded > 0) {
             allTrends.sort((a: any, b: any) => a.month.localeCompare(b.month))
             writeJson('trends', JSON.stringify(allTrends, null, 2))
-            addLog(`  Added ${current.budgetDate} to trends (income: ${current.totalIncome.toFixed(0)}, expenses: ${current.totalExpenses.toFixed(0)})`)
+            addLog(`  Added ${trendsAdded} months to trends. All months: ${allTrends.map((t: any) => t.month).join(', ')}`)
           } else {
-            addLog(`  Trends already has ${current.budgetDate}`)
+            addLog(`  Trends up to date: ${allTrends.map((t: any) => t.month).join(', ')}`)
           }
         } catch (err) {
           const msg = (err as any).stderr || (err as Error).message || 'unknown'
