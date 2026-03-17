@@ -10,7 +10,7 @@ import initialHistory from '../data/pension-history.json';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
 
-const CURRENT_AGE = 53;
+const DEFAULT_AGE = 53;
 
 const formatCurrency = (val) => {
     if (!val && val !== 0) return '₪0';
@@ -24,10 +24,10 @@ const formatFull = (val) => {
     return new Intl.NumberFormat('he-IL', { style: 'currency', currency: 'ILS', maximumFractionDigits: 0 }).format(val).replace('ILS', '₪');
 };
 
-// Project a single account forward
-function projectAccount(account, retirementAge) {
-    const yearsToRetire = Math.max(0, retirementAge - CURRENT_AGE);
-    const depositYears = Math.max(0, Math.min(account.depositStopAge, retirementAge) - CURRENT_AGE);
+// Project a single account forward (with custom current age)
+function projectAccountWithAge(account, retirementAge, currentAge = DEFAULT_AGE) {
+    const yearsToRetire = Math.max(0, retirementAge - currentAge);
+    const depositYears = Math.max(0, Math.min(account.depositStopAge, retirementAge) - currentAge);
     const monthlyRate = (account.annualInterest / 100) / 12;
     const depositMonths = depositYears * 12;
     const totalMonths = yearsToRetire * 12;
@@ -42,15 +42,15 @@ function projectAccount(account, retirementAge) {
 }
 
 // Build year-by-year trajectory for chart
-function buildTrajectory(accounts, retirementAge, monthlySpending) {
+function buildTrajectory(accounts, retirementAge, monthlySpending, currentAge = DEFAULT_AGE) {
     const maxAge = 90;
     const points = [];
 
-    for (let age = CURRENT_AGE; age <= maxAge; age++) {
+    for (let age = currentAge; age <= maxAge; age++) {
         let total = 0;
         for (const acc of accounts) {
-            const yearsFromNow = age - CURRENT_AGE;
-            const depositYears = Math.max(0, Math.min(acc.depositStopAge, retirementAge) - CURRENT_AGE);
+            const yearsFromNow = age - currentAge;
+            const depositYears = Math.max(0, Math.min(acc.depositStopAge, retirementAge) - currentAge);
             const monthlyRate = (acc.annualInterest / 100) / 12;
             const months = yearsFromNow * 12;
             const depositMonths = depositYears * 12;
@@ -60,7 +60,7 @@ function buildTrajectory(accounts, retirementAge, monthlySpending) {
                 bal *= (1 + monthlyRate);
                 if (m < depositMonths) bal += acc.monthlyDeposit;
                 // Withdraw after retirement
-                if (CURRENT_AGE + m / 12 >= retirementAge) {
+                if (currentAge + m / 12 >= retirementAge) {
                     // Proportional withdrawal from this account
                     // Simplified: withdraw proportionally
                 }
@@ -75,17 +75,17 @@ function buildTrajectory(accounts, retirementAge, monthlySpending) {
     let runningTotal = 0;
 
     // Pre-compute total at each year
-    for (let age = CURRENT_AGE; age <= maxAge; age++) {
+    for (let age = currentAge; age <= maxAge; age++) {
         if (age <= retirementAge) {
             // Growth phase
             let total = 0;
             for (const acc of accounts) {
-                total += projectAccountToAge(acc, age);
+                total += projectAccountToAge(acc, age, currentAge);
             }
             runningTotal = total;
         } else {
             // Drawdown phase — subtract spending, add interest on remaining
-            const avgRate = accounts.reduce((s, a) => s + a.annualInterest, 0) / accounts.length / 100;
+            const avgRate = accounts.length > 0 ? accounts.reduce((s, a) => s + a.annualInterest, 0) / accounts.length / 100 : 0.04;
             runningTotal = runningTotal * (1 + avgRate) - monthlySpending * 12;
             if (runningTotal < 0) runningTotal = 0;
         }
@@ -94,9 +94,9 @@ function buildTrajectory(accounts, retirementAge, monthlySpending) {
     return result;
 }
 
-function projectAccountToAge(account, targetAge) {
-    const years = Math.max(0, targetAge - CURRENT_AGE);
-    const depositYears = Math.max(0, Math.min(account.depositStopAge, targetAge) - CURRENT_AGE);
+function projectAccountToAge(account, targetAge, currentAge = DEFAULT_AGE) {
+    const years = Math.max(0, targetAge - currentAge);
+    const depositYears = Math.max(0, Math.min(account.depositStopAge, targetAge) - currentAge);
     const monthlyRate = (account.annualInterest / 100) / 12;
     const totalMonths = years * 12;
     const depositMonths = depositYears * 12;
@@ -115,26 +115,39 @@ const tooltipDefaults = {
     borderColor: 'rgba(255,255,255,0.1)', borderWidth: 1, padding: 12,
 };
 
+const OWNERS = {
+    ilan: { label: 'Ilan', age: 53, defaultRetirement: 63 },
+    spouse: { label: 'Spouse', age: 51, defaultRetirement: 65 },
+};
+
 export default function Pension() {
-    const [accounts, setAccounts] = useState(initialAccounts);
-    const [retirementAge, setRetirementAge] = useState(63);
+    const [allAccounts, setAllAccounts] = useState(initialAccounts);
+    const [activeOwner, setActiveOwner] = useState('ilan');
+    const [retirementAges, setRetirementAges] = useState({ ilan: 63, spouse: 65 });
     const [monthlySpending, setMonthlySpending] = useState(40000);
     const [importing, setImporting] = useState(false);
     const [history, setHistory] = useState(Array.isArray(initialHistory) ? initialHistory : []);
     const [showAddRow, setShowAddRow] = useState(false);
     const [newAccount, setNewAccount] = useState({ name: '', company: '', currentBalance: 0, annualInterest: 4, monthlyDeposit: 0, depositStopAge: 63, monthlyPension: 0 });
 
-    // Computed values — ALL accounts projected
+    const ownerConfig = OWNERS[activeOwner] || OWNERS.ilan;
+    const accounts = useMemo(() => allAccounts.filter(a => (a.owner || 'ilan') === activeOwner), [allAccounts, activeOwner]);
+    const retirementAge = retirementAges[activeOwner];
+    const setRetirementAge = (age) => setRetirementAges(prev => ({ ...prev, [activeOwner]: age }));
+
+    const currentAge = ownerConfig.age;
+
+    // Computed values — owner's accounts projected
     const totalToday = useMemo(() => accounts.reduce((s, a) => s + a.currentBalance, 0), [accounts]);
     const projections = useMemo(() => accounts.map(a => ({
-        ...a, projected: projectAccount(a, retirementAge),
-    })), [accounts, retirementAge]);
+        ...a, projected: projectAccountWithAge(a, retirementAge, currentAge),
+    })), [accounts, retirementAge, currentAge]);
     const totalProjected = useMemo(() => projections.reduce((s, a) => s + a.projected, 0), [projections]);
     const totalMonthlyDeposit = useMemo(() => accounts.reduce((s, a) => s + a.monthlyDeposit, 0), [accounts]);
 
-    // Sufficiency: drawdown from total projected (no pension offset — it's already in the balance)
+    // Sufficiency: drawdown from total projected
     const yearsLasting = useMemo(() => {
-        if (monthlySpending <= 0) return 99;
+        if (monthlySpending <= 0 || accounts.length === 0) return 99;
         const avgRate = accounts.reduce((s, a) => s + a.annualInterest, 0) / accounts.length / 100;
         let bal = totalProjected;
         let years = 0;
@@ -149,6 +162,7 @@ export default function Pension() {
 
     // Max affordable monthly spending (savings last 25 years)
     const maxAffordable = useMemo(() => {
+        if (accounts.length === 0) return 0;
         const avgRate = accounts.reduce((s, a) => s + a.annualInterest, 0) / accounts.length / 100;
         let lo = 0, hi = 200000;
         while (hi - lo > 100) {
@@ -163,12 +177,12 @@ export default function Pension() {
 
     // Chart data — ALL accounts in trajectory
     const chartData = useMemo(() => {
-        const trajectory = buildTrajectory(accounts, retirementAge, monthlySpending);
+        const trajectory = buildTrajectory(accounts, retirementAge, monthlySpending, currentAge);
         const labels = trajectory.map(p => String(p.age));
         const values = trajectory.map(p => p.total);
 
         // Split into growth and drawdown
-        const retIdx = retirementAge - CURRENT_AGE;
+        const retIdx = retirementAge - currentAge;
         const growthData = values.map((v, i) => i <= retIdx ? v : null);
         const drawdownData = values.map((v, i) => i >= retIdx ? v : null);
 
@@ -213,7 +227,7 @@ export default function Pension() {
                 grid: { color: 'rgba(255,255,255,0.05)' },
                 ticks: {
                     color: '#64748b',
-                    callback: (_, i) => (CURRENT_AGE + i) % 5 === 0 ? CURRENT_AGE + i : '',
+                    callback: function(_, i) { return (currentAge + i) % 5 === 0 ? currentAge + i : ''; },
                 },
             },
             y: {
@@ -225,7 +239,7 @@ export default function Pension() {
 
     // Update account field
     const updateAccount = (id, field, value) => {
-        setAccounts(prev => prev.map(a => a.id === id ? { ...a, [field]: Number(value) || 0 } : a));
+        setAllAccounts(prev => prev.map(a => a.id === id ? { ...a, [field]: Number(value) || 0 } : a));
     };
 
     // Import from XLS via file upload
@@ -236,15 +250,15 @@ export default function Pension() {
         try {
             const formData = new FormData();
             formData.append('file', file);
-            const res = await fetch('/api/import-pension', { method: 'POST', body: formData });
+            const res = await fetch(`/api/import-pension?owner=${activeOwner}`, { method: 'POST', body: formData });
             const data = await res.json();
             if (data.ok && data.accounts) {
-                setAccounts(data.accounts);
+                setAllAccounts(data.accounts);
                 if (data.history) setHistory(data.history);
             }
         } catch {} finally {
             setImporting(false);
-            e.target.value = ''; // reset file input
+            e.target.value = '';
         }
     };
 
@@ -252,14 +266,14 @@ export default function Pension() {
     const addManualAccount = () => {
         if (!newAccount.name) return;
         const id = 'manual-' + Date.now();
-        setAccounts(prev => [...prev, { ...newAccount, id, nameEn: newAccount.name, type: 'manual', status: 'active', policy: '', managementFee: 0 }]);
-        setNewAccount({ name: '', company: '', currentBalance: 0, annualInterest: 4, monthlyDeposit: 0, depositStopAge: 63, monthlyPension: 0 });
+        setAllAccounts(prev => [...prev, { ...newAccount, id, nameEn: newAccount.name, type: 'manual', status: 'active', policy: '', managementFee: 0, owner: activeOwner }]);
+        setNewAccount({ name: '', company: '', currentBalance: 0, annualInterest: 4, monthlyDeposit: 0, depositStopAge: retirementAge, monthlyPension: 0 });
         setShowAddRow(false);
     };
 
     // Delete account
     const deleteAccount = (id) => {
-        setAccounts(prev => prev.filter(a => a.id !== id));
+        setAllAccounts(prev => prev.filter(a => a.id !== id));
     };
 
     // History chart data
@@ -281,14 +295,61 @@ export default function Pension() {
     const suffColor = yearsLasting >= 25 ? 'var(--accent-success)' : yearsLasting >= 15 ? 'var(--accent-warning)' : 'var(--accent-danger)';
     const suffPct = Math.min(100, (yearsLasting / 35) * 100);
 
+    // Household totals (all owners combined)
+    const householdToday = useMemo(() => allAccounts.reduce((s, a) => s + a.currentBalance, 0), [allAccounts]);
+    const householdProjected = useMemo(() => {
+        return allAccounts.reduce((s, a) => {
+            const ownerAge = OWNERS[a.owner || 'ilan']?.age || 53;
+            const ownerRet = retirementAges[a.owner || 'ilan'] || 63;
+            return s + projectAccountWithAge(a, ownerRet, ownerAge);
+        }, 0);
+    }, [allAccounts, retirementAges]);
+
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
 
-            {/* Summary Cards */}
+            {/* Household Summary */}
+            <div className="glass-panel" style={{ padding: '16px 20px', overflow: 'visible' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                        <div>
+                            <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Household Total</div>
+                            <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--accent-primary)' }}>{formatFull(householdToday)}</div>
+                        </div>
+                        <div style={{ width: '1px', height: '30px', background: 'var(--border-light)' }} />
+                        <div>
+                            <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Household Projected</div>
+                            <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--accent-success)' }}>{formatFull(householdProjected)}</div>
+                        </div>
+                        <div style={{ width: '1px', height: '30px', background: 'var(--border-light)' }} />
+                        <div>
+                            <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Accounts</div>
+                            <div style={{ fontSize: '16px', fontWeight: 700 }}>{allAccounts.filter(a => (a.owner || 'ilan') === 'ilan').length} + {allAccounts.filter(a => a.owner === 'spouse').length}</div>
+                        </div>
+                    </div>
+
+                    {/* Owner sub-tabs */}
+                    <div style={{ display: 'flex', gap: '4px' }}>
+                        {Object.entries(OWNERS).map(([key, cfg]) => (
+                            <button key={key} onClick={() => setActiveOwner(key)} style={{
+                                padding: '6px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 600,
+                                cursor: 'pointer', fontFamily: 'inherit', transition: 'all 0.2s',
+                                border: activeOwner === key ? '1px solid var(--accent-primary)' : '1px solid var(--border-light)',
+                                background: activeOwner === key ? 'rgba(0,240,255,0.12)' : 'rgba(255,255,255,0.03)',
+                                color: activeOwner === key ? 'var(--accent-primary)' : 'var(--text-muted)',
+                            }}>
+                                {cfg.label}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* Per-owner Summary Cards */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '12px' }}>
                 {[
-                    { icon: <PiggyBank size={18} />, label: 'Total Savings', value: formatFull(totalToday), color: 'var(--accent-primary)', sub: `${accounts.length} accounts` },
-                    { icon: <TrendingUp size={18} />, label: `Projected at ${retirementAge}`, value: formatFull(totalProjected), color: 'var(--accent-success)', sub: `${retirementAge - CURRENT_AGE} years growth` },
+                    { icon: <PiggyBank size={18} />, label: `${ownerConfig.label}'s Savings`, value: formatFull(totalToday), color: 'var(--accent-primary)', sub: `${accounts.length} accounts` },
+                    { icon: <TrendingUp size={18} />, label: `Projected at ${retirementAge}`, value: formatFull(totalProjected), color: 'var(--accent-success)', sub: `${retirementAge - currentAge} years growth` },
                     { icon: <Shield size={18} />, label: 'Max Affordable/mo', value: formatFull(maxAffordable), color: 'var(--accent-success)', sub: 'Savings last 25+ years' },
                     { icon: <Clock size={18} />, label: 'Lasts Until Age', value: yearsLasting >= 50 ? '90+' : String(depletionAge), color: yearsLasting >= 25 ? 'var(--accent-success)' : 'var(--accent-warning)', sub: `At ${formatFull(monthlySpending)}/mo spending` },
                     { icon: <Clock size={18} />, label: 'Monthly Deposits', value: formatFull(totalMonthlyDeposit), color: 'var(--accent-warning)', sub: 'Employee + employer' },
@@ -451,7 +512,7 @@ export default function Pension() {
                                             }} />
                                     </td>
                                     <td style={{ padding: '10px 8px', textAlign: 'center' }}>
-                                        <input type="number" min={CURRENT_AGE} max={75} value={acc.depositStopAge}
+                                        <input type="number" min={currentAge} max={75} value={acc.depositStopAge}
                                             onChange={e => updateAccount(acc.id, 'depositStopAge', e.target.value)}
                                             style={{
                                                 width: '50px', padding: '4px 6px', borderRadius: '6px', fontSize: '12px',

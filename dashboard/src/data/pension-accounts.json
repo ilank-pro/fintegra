@@ -12,7 +12,8 @@
     "managementFee": 0.75,
     "nameEn": "קרן השתלמות",
     "type": "hishtalmut",
-    "depositStopAge": 63
+    "depositStopAge": 63,
+    "owner": "ilan"
   },
   {
     "id": "1007708-1",
@@ -27,7 +28,8 @@
     "managementFee": 0.75,
     "nameEn": "קרן השתלמות",
     "type": "hishtalmut",
-    "depositStopAge": 63
+    "depositStopAge": 63,
+    "owner": "ilan"
   },
   {
     "id": "1007742-2",
@@ -42,7 +44,8 @@
     "managementFee": 0.7,
     "nameEn": "קרן השתלמות",
     "type": "hishtalmut",
-    "depositStopAge": 63
+    "depositStopAge": 63,
+    "owner": "ilan"
   },
   {
     "id": "1007722-3",
@@ -57,7 +60,8 @@
     "managementFee": 0.75,
     "nameEn": "קרן השתלמות",
     "type": "hishtalmut",
-    "depositStopAge": 63
+    "depositStopAge": 63,
+    "owner": "ilan"
   },
   {
     "id": "25346420-4",
@@ -72,7 +76,8 @@
     "managementFee": 0.5,
     "nameEn": "פנסיה חדשה מקיפה",
     "type": "pension",
-    "depositStopAge": 63
+    "depositStopAge": 63,
+    "owner": "ilan"
   },
   {
     "id": "2561944-5",
@@ -87,7 +92,8 @@
     "managementFee": 0.6,
     "nameEn": "פוליסת ביטוח חיים משולב חיסכון",
     "type": "insurance_savings",
-    "depositStopAge": 63
+    "depositStopAge": 63,
+    "owner": "ilan"
   },
   {
     "id": "586-910-642935-0-6",
@@ -102,7 +108,8 @@
     "managementFee": 0.65,
     "nameEn": "קופת גמל להשקעה",
     "type": "gemel",
-    "depositStopAge": 63
+    "depositStopAge": 63,
+    "owner": "ilan"
   },
   {
     "id": "317751602-7",
@@ -117,7 +124,8 @@
     "managementFee": 0.6,
     "nameEn": "פוליסת ביטוח חיים משולב חיסכון",
     "type": "insurance_savings",
-    "depositStopAge": 63
+    "depositStopAge": 63,
+    "owner": "ilan"
   },
   {
     "id": "317751615-8",
@@ -132,7 +140,8 @@
     "managementFee": 0.6,
     "nameEn": "פוליסת ביטוח חיים משולב חיסכון",
     "type": "insurance_savings",
-    "depositStopAge": 63
+    "depositStopAge": 63,
+    "owner": "ilan"
   },
   {
     "id": "025346420-9",
@@ -147,6 +156,55 @@
     "managementFee": 0.22,
     "nameEn": "פנסיה חדשה מקיפה",
     "type": "pension",
-    "depositStopAge": 63
+    "depositStopAge": 63,
+    "owner": "ilan"
+  },
+  {
+    "id": "spouse-19058358-0",
+    "name": "פוליסת ביטוח חיים משולב חיסכון",
+    "company": "מגדל חברה לבטוח בע\"מ",
+    "policy": "19058358",
+    "status": "inactive",
+    "currentBalance": 39937,
+    "annualInterest": 2.7,
+    "monthlyDeposit": 0,
+    "monthlyPension": 289.7,
+    "managementFee": 1.05,
+    "nameEn": "פוליסת ביטוח חיים משולב חיסכון",
+    "type": "insurance_savings",
+    "depositStopAge": 65,
+    "owner": "spouse"
+  },
+  {
+    "id": "spouse-4063202-1",
+    "name": "פוליסת ביטוח חיים משולב חיסכון",
+    "company": "מגדל חברה לבטוח בע\"מ",
+    "policy": "4063202",
+    "status": "active",
+    "currentBalance": 1059293,
+    "annualInterest": 2.66,
+    "monthlyDeposit": 5364.08,
+    "monthlyPension": 16418.03,
+    "managementFee": 0.6,
+    "nameEn": "פוליסת ביטוח חיים משולב חיסכון",
+    "type": "insurance_savings",
+    "depositStopAge": 65,
+    "owner": "spouse"
+  },
+  {
+    "id": "spouse-32283319-2",
+    "name": "פנסיה חדשה מקיפה",
+    "company": "מגדל מקפת קרנות פנסיה וקופות גמל בע\"מ",
+    "policy": "32283319",
+    "status": "inactive",
+    "currentBalance": 524212,
+    "annualInterest": 3.18,
+    "monthlyDeposit": 0,
+    "monthlyPension": 4882.44,
+    "managementFee": 0.3,
+    "nameEn": "פנסיה חדשה מקיפה",
+    "type": "pension",
+    "depositStopAge": 65,
+    "owner": "spouse"
   }
 ]

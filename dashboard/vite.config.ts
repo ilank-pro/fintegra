@@ -396,14 +396,7 @@ for r in range(1, sheet.nrows):
             "monthlyDeposit": monthly_deposit, "monthlyPension": pension_mo,
             "managementFee": mgmt_fee,
         })
-# Add Harel pension (not in products sheet with balance)
-harel_exists = any(a["policy"] == "317751602" for a in accounts)
-if not harel_exists:
-    accounts.append({
-        "name": "פנסיה מקיפה (מעסיק)", "company": "הראל ביטוח", "policy": "317751602",
-        "status": "active", "currentBalance": 1717000, "annualInterest": 4.0,
-        "monthlyDeposit": 11033, "monthlyPension": 0, "managementFee": 0.5,
-    })
+# All accounts come from XLS — no hardcoded entries
 # Extract data date from first account's date column (col 29)
 data_date = None
 for r in range(1, sheet.nrows):
@@ -418,18 +411,29 @@ PYEOF`, { encoding: 'utf-8', timeout: 10000 })
           const accounts = parsed.accounts || parsed
           const dataDate = parsed.dataDate || new Date().toISOString().slice(0, 10)
 
-          // Add IDs and English names
+          // Determine owner from URL query
+          const urlObj = new URL(req.url || '', 'http://localhost')
+          const owner = urlObj.searchParams.get('owner') || 'ilan'
+          const defaultRetAge = owner === 'spouse' ? 65 : 63
+
+          // Add IDs, English names, and owner tag
           const withIds = accounts.map((a: any, i: number) => ({
-            id: a.policy.replace(/[^a-zA-Z0-9]/g, '-') + '-' + i,
+            id: `${owner}-${a.policy.replace(/[^a-zA-Z0-9]/g, '-')}-${i}`,
             ...a,
             nameEn: a.name,
             type: a.name.includes('השתלמות') ? 'hishtalmut' : a.name.includes('פנסיה') ? 'pension' : a.name.includes('גמל') ? 'gemel' : 'insurance_savings',
-            depositStopAge: 63,
+            depositStopAge: defaultRetAge,
+            owner,
           }))
 
+          // Merge with existing accounts (keep the other owner's accounts)
           const dataDir2 = join(__dirname, 'src', 'data')
           const outPath = join(dataDir2, 'pension-accounts.json')
-          fs.writeFileSync(outPath, JSON.stringify(withIds, null, 2))
+          let existingAccounts: any[] = []
+          try { existingAccounts = JSON.parse(fs.readFileSync(outPath, 'utf-8')) } catch {}
+          const otherOwnerAccounts = existingAccounts.filter((a: any) => a.owner !== owner)
+          const allAccounts = [...otherOwnerAccounts, ...withIds]
+          fs.writeFileSync(outPath, JSON.stringify(allAccounts, null, 2))
 
           // Save history entry (keyed by date — overwrite same date)
           const historyPath = join(dataDir2, 'pension-history.json')
@@ -451,7 +455,7 @@ PYEOF`, { encoding: 'utf-8', timeout: 10000 })
           try { fs.unlinkSync(tmpPath) } catch {}
 
           res.writeHead(200, { 'Content-Type': 'application/json' })
-          res.end(JSON.stringify({ ok: true, accounts: withIds, dataDate, history }))
+          res.end(JSON.stringify({ ok: true, accounts: allAccounts, dataDate, history }))
           } catch (err) {
             res.writeHead(500, { 'Content-Type': 'application/json' })
             res.end(JSON.stringify({ ok: false, error: (err as Error).message?.slice(0, 200) }))
