@@ -424,11 +424,27 @@ IMPORTANT: Return ONLY valid JSON, no markdown, no explanation outside the JSON.
   "riskMatrix": [
     { "risk": "risk name", "level": "high" | "medium" | "low", "mitigation": "how to address it" }
   ],
+  "savingsInsights": {
+    "status": "summary of current savings position across all accounts",
+    "highlights": [
+      { "account": "account name", "insight": "specific observation about this account", "action": "what to do" }
+    ]
+  },
+  "pensionInsights": {
+    "status": "summary of pension readiness — projected income vs needs",
+    "retirementGap": "description of any gap between projected and needed retirement income",
+    "highlights": [
+      { "account": "account name", "insight": "specific observation", "action": "what to do" }
+    ]
+  },
+  "pensionRecommendations": [
+    { "priority": 1, "title": "recommendation title", "description": "detailed recommendation with numbers", "impact": "high" | "medium" | "low", "category": "consolidation" | "contribution" | "allocation" | "fees" | "tax" }
+  ],
   "monthlyChecklist": ["actionable item 1", "actionable item 2", ...],
   "longTermOutlook": "1-2 paragraph forward-looking narrative about their financial trajectory and what achieving the plan would mean"
 }
 
-Include 3-4 keyMetrics, 4-5 topFindings, exactly 5 improvementPlan steps, 4-6 categoryTargets, 3-5 riskMatrix items, and 5-7 monthlyChecklist items.`
+Include 3-4 keyMetrics, 4-5 topFindings, exactly 5 improvementPlan steps, 4-6 categoryTargets, 3-5 riskMatrix items, 2-4 savingsInsights highlights, 2-4 pensionInsights highlights, 3-5 pensionRecommendations, and 5-7 monthlyChecklist items. The client is 53 years old with retirement target age 63.`
 
             const userMessage = `Here is the client's financial data and automated findings:
 

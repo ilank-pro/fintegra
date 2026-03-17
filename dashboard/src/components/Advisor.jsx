@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { AlertTriangle, CheckCircle2, AlertCircle, Sparkles, Key, ChevronDown, ChevronUp, RefreshCw, Download, Mail } from 'lucide-react';
+import { AlertTriangle, CheckCircle2, AlertCircle, Sparkles, Key, ChevronDown, ChevronUp, RefreshCw, Download, Mail, PiggyBank, Shield } from 'lucide-react';
 import trendsData from '../data/trends.json';
 import balanceData from '../data/balance.json';
 import spendingData from '../data/spending.json';
@@ -329,11 +329,10 @@ const severityConfig = {
 //  Component
 // ═══════════════════════════════════════════════════
 
-export default function Advisor() {
+export default function Advisor({ aiReport, setAiReport }) {
     const findings = useMemo(() => runRules(), []);
     const [expandedFindings, setExpandedFindings] = useState(new Set());
     const [apiKey, setApiKey] = useState(() => localStorage.getItem('fintegra-anthropic-key') || '');
-    const [aiReport, setAiReport] = useState(null);
     const [aiLoading, setAiLoading] = useState(false);
     const [aiError, setAiError] = useState(null);
 
@@ -425,6 +424,24 @@ export default function Advisor() {
         if (aiReport.monthlyChecklist?.length) {
             lines.push('Monthly Action Items');
             aiReport.monthlyChecklist.forEach(item => lines.push(`  [ ] ${item}`));
+            lines.push('');
+        }
+        if (aiReport.savingsInsights) {
+            lines.push('Savings Account Insights');
+            lines.push(aiReport.savingsInsights.status);
+            (aiReport.savingsInsights.highlights || []).forEach(h => lines.push(`  ${h.account}: ${h.insight} -> ${h.action}`));
+            lines.push('');
+        }
+        if (aiReport.pensionInsights) {
+            lines.push('Pension Status & Insights');
+            lines.push(aiReport.pensionInsights.status);
+            if (aiReport.pensionInsights.retirementGap) lines.push(`  Gap: ${aiReport.pensionInsights.retirementGap}`);
+            (aiReport.pensionInsights.highlights || []).forEach(h => lines.push(`  ${h.account}: ${h.insight} -> ${h.action}`));
+            lines.push('');
+        }
+        if (aiReport.pensionRecommendations?.length) {
+            lines.push('Pension & Savings Recommendations');
+            aiReport.pensionRecommendations.forEach((r, i) => lines.push(`  ${i+1}. [${r.impact.toUpperCase()}] ${r.title}: ${r.description}`));
             lines.push('');
         }
         if (aiReport.longTermOutlook) lines.push(`Long-Term Outlook\n${aiReport.longTermOutlook}`);
@@ -788,6 +805,89 @@ export default function Advisor() {
                                             <span style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: 1.5 }}>{item}</span>
                                         </div>
                                     ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Savings Insights */}
+                        {aiReport.savingsInsights && (
+                            <div>
+                                <h4 style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '10px' }}>Savings Account Insights</h4>
+                                <div className="glass-panel" style={{ padding: '16px', background: 'rgba(0,240,255,0.03)', border: '1px solid rgba(0,240,255,0.1)' }}>
+                                    <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '12px', lineHeight: 1.6 }}>{aiReport.savingsInsights.status}</p>
+                                    {aiReport.savingsInsights.highlights?.length > 0 && (
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                            {aiReport.savingsInsights.highlights.map((h, i) => (
+                                                <div key={i} style={{ display: 'flex', gap: '12px', padding: '10px', background: 'rgba(255,255,255,0.02)', borderRadius: '8px', border: '1px solid var(--border-light)' }}>
+                                                    <PiggyBank size={16} color="var(--accent-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                                                    <div>
+                                                        <div style={{ fontSize: '12px', fontWeight: 600, marginBottom: '2px' }}>{h.account}</div>
+                                                        <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '4px' }}>{h.insight}</div>
+                                                        <div style={{ fontSize: '11px', color: 'var(--accent-primary)', fontWeight: 500 }}>{h.action}</div>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Pension Insights */}
+                        {aiReport.pensionInsights && (
+                            <div>
+                                <h4 style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '10px' }}>Pension Status & Insights</h4>
+                                <div className="glass-panel" style={{ padding: '16px', background: 'rgba(139,92,246,0.03)', border: '1px solid rgba(139,92,246,0.1)' }}>
+                                    <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '8px', lineHeight: 1.6 }}>{aiReport.pensionInsights.status}</p>
+                                    {aiReport.pensionInsights.retirementGap && (
+                                        <div style={{ padding: '10px', background: 'rgba(245,158,11,0.06)', borderRadius: '8px', border: '1px solid rgba(245,158,11,0.12)', marginBottom: '12px' }}>
+                                            <div style={{ fontSize: '11px', fontWeight: 600, color: 'var(--accent-warning)', marginBottom: '4px' }}>Retirement Income Gap</div>
+                                            <div style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: 1.5 }}>{aiReport.pensionInsights.retirementGap}</div>
+                                        </div>
+                                    )}
+                                    {aiReport.pensionInsights.highlights?.length > 0 && (
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                            {aiReport.pensionInsights.highlights.map((h, i) => (
+                                                <div key={i} style={{ display: 'flex', gap: '12px', padding: '10px', background: 'rgba(255,255,255,0.02)', borderRadius: '8px', border: '1px solid var(--border-light)' }}>
+                                                    <Shield size={16} color="var(--accent-purple)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                                                    <div>
+                                                        <div style={{ fontSize: '12px', fontWeight: 600, marginBottom: '2px' }}>{h.account}</div>
+                                                        <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '4px' }}>{h.insight}</div>
+                                                        <div style={{ fontSize: '11px', color: 'var(--accent-purple)', fontWeight: 500 }}>{h.action}</div>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Pension & Savings Recommendations */}
+                        {aiReport.pensionRecommendations?.length > 0 && (
+                            <div>
+                                <h4 style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '10px' }}>Pension & Savings Recommendations</h4>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                                    {aiReport.pensionRecommendations.map((rec, i) => {
+                                        const impactColor = rec.impact === 'high' ? 'var(--accent-success)' : rec.impact === 'medium' ? 'var(--accent-warning)' : 'var(--text-muted)';
+                                        const catIcons = { consolidation: '🔗', contribution: '💰', allocation: '📊', fees: '💸', tax: '🏛️' };
+                                        return (
+                                            <div key={i} style={{ display: 'flex', gap: '14px', padding: '14px 16px', background: 'rgba(255,255,255,0.02)', borderRadius: '10px', border: '1px solid var(--border-light)' }}>
+                                                <div style={{
+                                                    width: '32px', height: '32px', borderRadius: '50%', flexShrink: 0,
+                                                    background: 'rgba(139,92,246,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                    fontSize: '16px',
+                                                }}>{catIcons[rec.category] || '📋'}</div>
+                                                <div style={{ flex: 1 }}>
+                                                    <div className="flex-between" style={{ marginBottom: '4px' }}>
+                                                        <span style={{ fontSize: '13px', fontWeight: 600 }}>{rec.title}</span>
+                                                        <span style={{ fontSize: '10px', fontWeight: 600, padding: '2px 8px', borderRadius: '6px', background: impactColor + '22', color: impactColor, textTransform: 'uppercase' }}>{rec.impact}</span>
+                                                    </div>
+                                                    <div style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: 1.5 }}>{rec.description}</div>
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         )}

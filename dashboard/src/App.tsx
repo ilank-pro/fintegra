@@ -89,6 +89,7 @@ function App() {
     const [refreshMsg, setRefreshMsg] = useState<string | null>(null);
     const [drillCategory, setDrillCategory] = useState<string | null>(null);
     const [monthBarPinned, setMonthBarPinned] = useState(false);
+    const [aiReport, setAiReport] = useState<any>(null);
 
     const toggleMonth = useCallback((m: string, e: React.MouseEvent) => {
         if (e.metaKey || e.ctrlKey) {
@@ -143,7 +144,7 @@ function App() {
             case 'transactions': return <Transactions selectedMonths={selectedMonths} drillCategory={drillCategory} onDrillClear={() => setDrillCategory(null)} />;
             case 'insights': return <Insights selectedMonths={selectedMonths} />;
             case 'simulations': return <Simulations selectedMonths={selectedMonths} />;
-            case 'advisor': return <Advisor />;
+            case 'advisor': return <Advisor aiReport={aiReport} setAiReport={setAiReport} />;
             case 'pension': return <Pension />;
             default: return <Overview selectedMonths={selectedMonths} availableMonths={availableMonths} />;
         }
