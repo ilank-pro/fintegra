@@ -118,9 +118,25 @@ function AnimatedPercent({ target, delay, className }) {
     return <span className={className}>{Math.round(raw)}%</span>;
 }
 
-export default function Overview({ selectedMonths, availableMonths }) {
+export default function Overview({ selectedMonths, availableMonths, pensionOverrides }) {
     const [mounted, setMounted] = useState(false);
     const [pendingOpen, setPendingOpen] = useState(false);
+
+    const mergedHealthScore = useMemo(() => {
+        if (!healthScoreData) return null;
+        if (!pensionOverrides) return healthScoreData;
+        return {
+            ...healthScoreData,
+            composite: pensionOverrides.composite,
+            grade: pensionOverrides.grade,
+            level: pensionOverrides.level,
+            levelTitle: pensionOverrides.levelTitle,
+            xpInLevel: pensionOverrides.xpInLevel,
+            scores: { ...healthScoreData.scores, retirementReadiness: pensionOverrides.scores.retirementReadiness },
+            assetTiers: pensionOverrides.assetTiers,
+            retirement: pensionOverrides.retirement,
+        };
+    }, [pensionOverrides]);
 
     useEffect(() => {
         requestAnimationFrame(() => setMounted(true));
@@ -231,8 +247,8 @@ export default function Overview({ selectedMonths, availableMonths }) {
     return (
         <div className="overview-container">
             {/* Financial Health Score — TOP OF PAGE */}
-            {healthScoreData && (() => {
-                const hs = healthScoreData;
+            {mergedHealthScore && (() => {
+                const hs = mergedHealthScore;
                 const gradeColor = hs.grade === 'A' ? 'var(--accent-success)' : hs.grade === 'B' ? 'var(--accent-primary)' : hs.grade === 'C' ? 'var(--accent-warning)' : 'var(--accent-danger)';
 
                 const ringSize = 130;
@@ -360,8 +376,8 @@ export default function Overview({ selectedMonths, availableMonths }) {
             })()}
 
             {/* 3-Tier Net Worth */}
-            {healthScoreData?.assetTiers && (() => {
-                const tiers = healthScoreData.assetTiers;
+            {mergedHealthScore?.assetTiers && (() => {
+                const tiers = mergedHealthScore.assetTiers;
                 const items = [
                     { label: 'Liquid', sub: 'Bank + savings accounts', value: tiers.liquid, color: 'var(--accent-primary)', pct: tiers.totalNetWorth > 0 ? (tiers.liquid / tiers.totalNetWorth * 100) : 0 },
                     { label: 'Accessible', sub: 'Hishtalmut funds (vested)', value: tiers.accessible, color: 'var(--accent-success)', pct: tiers.totalNetWorth > 0 ? (tiers.accessible / tiers.totalNetWorth * 100) : 0 },

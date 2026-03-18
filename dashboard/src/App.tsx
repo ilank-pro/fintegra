@@ -9,6 +9,8 @@ import SpendingBreakdown from './components/SpendingBreakdown';
 import Simulations from './components/Simulations';
 import Advisor from './components/Advisor';
 import Pension from './components/Pension';
+import initialPensionAccounts from './data/pension-accounts.json';
+import healthScoreData from './data/health-score.json';
 import trendsData from './data/trends.json';
 import transactionsData from './data/transactions.json';
 import spendingData from './data/spending.json';
@@ -85,6 +87,62 @@ function App() {
         return new Set();
     });
 
+    const [pensionAccounts, setPensionAccounts] = useState(initialPensionAccounts);
+    const [retirementAges, setRetirementAges] = useState<Record<string, number>>({ ilan: 63, spouse: 65 });
+
+    const pensionOverrides = useMemo(() => {
+        const OWNER_AGES: Record<string, number> = { ilan: 53, spouse: 51 };
+        const clamp = (v: number) => Math.max(0, Math.min(100, v));
+
+        const totalSavings = pensionAccounts.reduce((s, a) => s + (a.currentBalance || 0), 0);
+        const monthlyDeposits = pensionAccounts.reduce((s, a) => s + (a.monthlyDeposit || 0), 0);
+
+        let projectedPension = 0;
+        for (const a of pensionAccounts) {
+            const ownerAge = OWNER_AGES[a.owner || 'ilan'] || 53;
+            const ownerRet = retirementAges[a.owner || 'ilan'] || 63;
+            const yrs = Math.max(0, ownerRet - ownerAge);
+            const monthlyRate = (a.annualInterest || 4) / 100 / 12;
+            const depositMonths = Math.max(0, Math.min(a.depositStopAge || ownerRet, ownerRet) - ownerAge) * 12;
+            let bal = a.currentBalance || 0;
+            for (let m = 0; m < yrs * 12; m++) {
+                bal *= (1 + monthlyRate);
+                if (m < depositMonths) bal += (a.monthlyDeposit || 0);
+            }
+            projectedPension += bal;
+        }
+
+        const sustainableMonthly = projectedPension * 0.04 / 12;
+        const targetMonthly = (healthScoreData as any)?.retirement?.targetMonthly || 43232;
+        const retirementReadiness = clamp(Math.round(targetMonthly > 0 ? (sustainableMonthly / targetMonthly) * 100 : 0));
+
+        const accessible = pensionAccounts.filter(a => a.type === 'hishtalmut').reduce((s, a) => s + (a.currentBalance || 0), 0);
+        const longTerm = pensionAccounts.filter(a => a.type !== 'hishtalmut').reduce((s, a) => s + (a.currentBalance || 0), 0);
+        const liquid = (healthScoreData as any)?.assetTiers?.liquid || 0;
+        const totalNetWorth = liquid + accessible + longTerm;
+
+        const hs = healthScoreData as any;
+        const composite = hs ? Math.round(
+            (hs.scores.cashFlow) * 0.25 +
+            (hs.scores.emergencyFund) * 0.20 +
+            (hs.scores.budgetAdherence) * 0.20 +
+            (hs.scores.savingsGrowth) * 0.15 +
+            retirementReadiness * 0.20
+        ) : 0;
+        const grade = composite >= 80 ? 'A' : composite >= 60 ? 'B' : composite >= 40 ? 'C' : composite >= 20 ? 'D' : 'F';
+        const level = Math.max(1, Math.min(10, Math.ceil(composite / 10)));
+        const levelTitles = ['', 'Getting Started', 'Getting Started', 'Building Habits', 'Building Habits', 'Making Progress', 'Making Progress', 'Financial Fitness', 'Financial Fitness', 'Money Master', 'Money Master'];
+        const levelTitle = levelTitles[level] || 'Getting Started';
+        const xpInLevel = composite % 10;
+
+        return {
+            scores: { retirementReadiness },
+            assetTiers: { accessible, longTerm, totalNetWorth, liquid },
+            retirement: { projectedPension, sustainableMonthly, targetMonthly, totalSavings, monthlyDeposits },
+            composite, grade, level, levelTitle, xpInLevel,
+        };
+    }, [pensionAccounts, retirementAges]);
+
     const [refreshing, setRefreshing] = useState(false);
     const [refreshMsg, setRefreshMsg] = useState<string | null>(null);
     const [drillCategory, setDrillCategory] = useState<string | null>(null);
@@ -138,15 +196,15 @@ function App() {
 
     const renderContent = () => {
         switch (activeTab) {
-            case 'overview': return <Overview selectedMonths={selectedMonths} availableMonths={availableMonths} />;
+            case 'overview': return <Overview selectedMonths={selectedMonths} availableMonths={availableMonths} pensionOverrides={pensionOverrides} />;
             case 'cashflow': return <CashFlow selectedMonths={selectedMonths} />;
             case 'spending': return <SpendingBreakdown selectedMonths={selectedMonths} onCategoryClick={(cat: string) => { setDrillCategory(cat); setActiveTab('transactions'); }} />;
             case 'transactions': return <Transactions selectedMonths={selectedMonths} drillCategory={drillCategory} onDrillClear={() => setDrillCategory(null)} />;
             case 'insights': return <Insights selectedMonths={selectedMonths} />;
             case 'simulations': return <Simulations selectedMonths={selectedMonths} />;
             case 'advisor': return <Advisor aiReport={aiReport} setAiReport={setAiReport} />;
-            case 'pension': return <Pension />;
-            default: return <Overview selectedMonths={selectedMonths} availableMonths={availableMonths} />;
+            case 'pension': return <Pension allAccounts={pensionAccounts} setAllAccounts={setPensionAccounts} retirementAges={retirementAges} setRetirementAges={setRetirementAges} />;
+            default: return <Overview selectedMonths={selectedMonths} availableMonths={availableMonths} pensionOverrides={pensionOverrides} />;
         }
     };
 

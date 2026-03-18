@@ -5,7 +5,6 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import { PiggyBank, Upload, TrendingUp, Clock, Shield, Plus, Trash2 } from 'lucide-react';
-import initialAccounts from '../data/pension-accounts.json';
 import initialHistory from '../data/pension-history.json';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
@@ -120,15 +119,14 @@ const OWNERS = {
     spouse: { label: 'Spouse', age: 51, defaultRetirement: 65 },
 };
 
-export default function Pension() {
-    const [allAccounts, setAllAccounts] = useState(initialAccounts);
+export default function Pension({ allAccounts, setAllAccounts, retirementAges, setRetirementAges }) {
     const [selectedOwners, setSelectedOwners] = useState(new Set(['ilan']));
-    const [retirementAges, setRetirementAges] = useState({ ilan: 63, spouse: 65 });
     const [monthlySpending, setMonthlySpending] = useState(40000);
     const [importing, setImporting] = useState(false);
     const [history, setHistory] = useState(Array.isArray(initialHistory) ? initialHistory : []);
     const [showAddRow, setShowAddRow] = useState(false);
     const [newAccount, setNewAccount] = useState({ name: '', company: '', currentBalance: 0, annualInterest: 4, monthlyDeposit: 0, depositStopAge: 63, monthlyPension: 0 });
+    const [sortConfig, setSortConfig] = useState({ key: null, direction: 'desc' });
 
     const isCombined = selectedOwners.size > 1;
     const activeOwner = isCombined ? 'ilan' : [...selectedOwners][0] || 'ilan'; // primary owner for imports/adds
@@ -272,6 +270,35 @@ export default function Pension() {
             },
         },
     };
+
+    const handleSort = (key) => {
+        setSortConfig(prev => prev.key === key
+            ? { key, direction: prev.direction === 'desc' ? 'asc' : 'desc' }
+            : { key, direction: 'desc' }
+        );
+    };
+
+    const sortedProjections = useMemo(() => {
+        if (!sortConfig.key) return projections;
+        const sorted = [...projections].sort((a, b) => {
+            const accessors = {
+                name: x => (x.nameEn || '').toLowerCase(),
+                company: x => (x.company || '').toLowerCase(),
+                currentBalance: x => x.currentBalance || 0,
+                annualInterest: x => x.annualInterest || 0,
+                monthlyDeposit: x => x.monthlyDeposit || 0,
+                depositStopAge: x => x.depositStopAge || 0,
+                projected: x => x.projected || 0,
+                monthlyPension: x => x.monthlyPension || 0,
+            };
+            const get = accessors[sortConfig.key];
+            if (!get) return 0;
+            const va = get(a), vb = get(b);
+            const cmp = typeof va === 'string' ? va.localeCompare(vb) : va - vb;
+            return sortConfig.direction === 'asc' ? cmp : -cmp;
+        });
+        return sorted;
+    }, [projections, sortConfig]);
 
     // Update account field
     const updateAccount = (id, field, value) => {
@@ -513,19 +540,26 @@ export default function Pension() {
                     <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '12px' }}>
                         <thead>
                             <tr style={{ borderBottom: '1px solid var(--border-light)', color: 'var(--text-muted)' }}>
-                                <th style={{ padding: '10px 8px', textAlign: 'left', fontWeight: 600 }}>Account</th>
-                                <th style={{ padding: '10px 8px', textAlign: 'left', fontWeight: 600 }}>Company</th>
-                                <th style={{ padding: '10px 8px', textAlign: 'right', fontWeight: 600 }}>Current ₪</th>
-                                <th style={{ padding: '10px 8px', textAlign: 'center', fontWeight: 600 }}>Interest %</th>
-                                <th style={{ padding: '10px 8px', textAlign: 'center', fontWeight: 600 }}>Monthly Deposit</th>
-                                <th style={{ padding: '10px 8px', textAlign: 'center', fontWeight: 600 }}>Until Age</th>
-                                <th style={{ padding: '10px 8px', textAlign: 'right', fontWeight: 600 }}>Projected</th>
-                                <th style={{ padding: '10px 8px', textAlign: 'right', fontWeight: 600 }}>Pension/mo</th>
+                                {[
+                                    { key: 'name', label: 'Account', align: 'left' },
+                                    { key: 'company', label: 'Company', align: 'left' },
+                                    { key: 'currentBalance', label: 'Current ₪', align: 'right' },
+                                    { key: 'annualInterest', label: 'Interest %', align: 'center' },
+                                    { key: 'monthlyDeposit', label: 'Monthly Deposit', align: 'center' },
+                                    { key: 'depositStopAge', label: 'Until Age', align: 'center' },
+                                    { key: 'projected', label: 'Projected', align: 'right' },
+                                    { key: 'monthlyPension', label: 'Pension/mo', align: 'right' },
+                                ].map(col => (
+                                    <th key={col.key} onClick={() => handleSort(col.key)}
+                                        style={{ padding: '10px 8px', textAlign: col.align, fontWeight: 600, cursor: 'pointer', userSelect: 'none' }}>
+                                        {col.label} {sortConfig.key === col.key ? (sortConfig.direction === 'desc' ? '▼' : '▲') : ''}
+                                    </th>
+                                ))}
                                 <th style={{ padding: '10px 8px', width: '40px' }}></th>
                             </tr>
                         </thead>
                         <tbody>
-                            {projections.map(acc => (
+                            {sortedProjections.map(acc => (
                                 <tr key={acc.id} style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }} className="hover-row">
                                     <td style={{ padding: '10px 8px' }}>
                                         <div style={{ fontWeight: 600, fontSize: '12px' }}>{acc.nameEn}</div>
